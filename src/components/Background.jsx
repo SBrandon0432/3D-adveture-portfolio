@@ -5,7 +5,6 @@ import nebula from '../Assets/nebula.jpeg'
 
 const Background = (props) => {
 
-  const {gl} = useThree();
   const texture = useLoader(THREE.TextureLoader, nebula);
 
   texture.encoding = THREE.sRGBEncoding;
