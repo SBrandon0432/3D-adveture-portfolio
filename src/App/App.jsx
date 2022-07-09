@@ -1,5 +1,6 @@
 import React,{Suspense} from 'react';
 import {Canvas} from 'react-three-fiber';
+import { Physics, Debug } from "@react-three/cannon";
 import Background from '../components/Background';
 import Orbit from '../components/Orbit';
 import Goblin from '../components/Goblin';
@@ -25,7 +26,11 @@ function App() {
         <axesHelper/>
 
         <Suspense fallback={null}>
-          <Goblin />
+          <Physics>
+            <BoundingBox visible>
+             <Goblin />
+            </BoundingBox>
+          </Physics>
         </Suspense>
 {/*
         <Suspense>

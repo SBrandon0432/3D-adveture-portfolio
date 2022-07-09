@@ -10,7 +10,7 @@ const BoundingBox = ({
 }) => {
 
 
-  const [ref, api] = useBox(()=>({mass:1, args: dims, position: position}))
+  const [ref, api] = useBox(()=>({mass:0, args: dims, position: position}))
 
   return (
     <group ref={ref} api={api}>
