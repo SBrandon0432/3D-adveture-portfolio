@@ -12,18 +12,20 @@ function App() {
 
       <Canvas
         camera = {[7,7,7]}
+        shadows
       >
-        <ambientLight intensity={1.15}/>
+        <ambientLight intensity={2.15} position={[0,10,0]}/>
+
         <Orbit/>
         <axesHelper/>
 
         <Suspense fallback={null}>
-          <Goblin/>
+          <Goblin />
         </Suspense>
-
+{/*
         <Suspense>
          <Background/>
-        </Suspense>
+        </Suspense> */}
 
 
       </Canvas>

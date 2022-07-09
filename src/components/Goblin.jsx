@@ -8,10 +8,12 @@ const Goblin = (props) => {
 
 
   return (
+    <group rotation={[0, 90, 0]}>
     <Model
       path={'/desert_racer/scene.gltf'}
       scale={new Array(3).fill(.04)}
       />
+    </group>
   )
 }
 
