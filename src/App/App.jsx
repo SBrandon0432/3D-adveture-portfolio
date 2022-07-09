@@ -6,6 +6,7 @@ import Orbit from '../components/Orbit';
 import Goblin from '../components/Goblin';
 import BoundingBox from '../components/BoundingBox';
 import Bulb from '../components/Bulb';
+import * as THREE from 'three'
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
 
         <Bulb  position={[0,6,0]}/>
         <Orbit/>
-        <axesHelper/>
+        {/* <axesHelper/> */}
 
 
           <Physics>

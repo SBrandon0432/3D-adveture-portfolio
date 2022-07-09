@@ -2,13 +2,14 @@ import React, { Suspense} from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { useGLTF  } from '@react-three/drei'
 
 const Model = props =>{
 
-  const model = useLoader(
-    GLTFLoader, props.path
-  ) //loads file
-
+  // const model = useLoader(
+  //   GLTFLoader, props.path
+  // ) //loads file
+    const model = useGLTF(props.path)
 
     let mixer;
     if (model.animations.length > 0) {
@@ -25,6 +26,12 @@ const Model = props =>{
 
   model.scene.traverse(child => {
     if (child.isMesh) {
+      // console.log(child.material.depthWrite, 'mesh')
+
+      if (child.material.depthTest) {
+        child.material.depthWrite=true;
+      }
+
       child.castShadow = true;
       child.receiveShadow = true;
       child.material.side = THREE.FrontSide;
@@ -37,6 +44,7 @@ const Model = props =>{
         {...props}
         scale={props.scale}
         object={model.scene}
+        transparent={false}
         />
       </Suspense>
   )
