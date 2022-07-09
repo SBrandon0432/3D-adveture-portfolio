@@ -24,7 +24,7 @@ function App() {
 
         <Bulb  position={[0,6,0]}/>
         <Orbit/>
-        {/* <axesHelper/> */}
+        <axesHelper/>
 
 
           <Physics>
