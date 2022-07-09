@@ -21,24 +21,16 @@ function App() {
       >
         <ambientLight intensity={2.15} position={[0,10,0]}/>
 
-        <mesh position={[0,3,0]}>
-          <pointLight color='white' intensity={2}
-            castShadow
-          />
-          <sphereBufferGeometry args={[1,1,1]}/>
-          <meshPhongMaterial color={'white'}/>
-        </mesh>
-
+        <Bulb  position={[0,6,0]}/>
         <Orbit/>
         <axesHelper/>
 
-        <Suspense fallback={null}>
+
           <Physics>
             <BoundingBox visible>
              <Goblin />
             </BoundingBox>
           </Physics>
-        </Suspense>
 
 
         <Suspense>
