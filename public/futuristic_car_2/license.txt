@@ -1,0 +1,8 @@
+Model Information:
+* title:	Futuristic Car 2
+* source:	https://sketchfab.com/3d-models/futuristic-car-2-08e8f33d836b4611a50f7cbef520b42c
+* author:	Giimann (https://sketchfab.com/giimann)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

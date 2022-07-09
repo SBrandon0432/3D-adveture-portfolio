@@ -1,0 +1,8 @@
+Model Information:
+* title:	Small House Diorama
+* source:	https://sketchfab.com/3d-models/small-house-diorama-ecad293392294dc4b0c3298242421f79
+* author:	glenatron (https://sketchfab.com/glenatron)
+
+Model License:
+* license type:	SKETCHFAB Editorial (https://sketchfab.com/licenses)
+* requirements:	Use only in connection with events that are newsworthy or of public interest
