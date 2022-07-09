@@ -22,7 +22,7 @@ function App() {
       >
         <ambientLight intensity={2.15} position={[0,10,0]}/>
 
-        <Bulb  position={[0,6,0]}/>
+        <Bulb  position={[0,6,0]} color={'white'}/>
         <Orbit/>
         <axesHelper/>
 
@@ -42,6 +42,7 @@ function App() {
       <boxBufferGeometry args={[5,1,5]} />
       <meshPhysicalMaterial color={'black'}/>
     </mesh>
+
 
 
       </Canvas>
