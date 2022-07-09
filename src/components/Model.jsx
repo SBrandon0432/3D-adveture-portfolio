@@ -11,6 +11,7 @@ const Model = props =>{
   // ) //loads file
     const model = useGLTF(props.path)
 
+
     let mixer;
     if (model.animations.length > 0) {
       mixer = new THREE.AnimationMixer(model.scene);
@@ -26,29 +27,31 @@ const Model = props =>{
 
   model.scene.traverse(child => {
     if (child.isMesh) {
-      // console.log(child.material.depthWrite, 'mesh')
+      console.log(child.material, 'mesh')
+
+      if (child.material.name === 'Grnd') {
+        child.material.visible = false // turns bikes shadow off for right now.
+      } // bike
 
       if (child.material.depthTest) {
         child.material.depthWrite=true;
-      }
+      } // bike
 
       child.castShadow = true;
       child.receiveShadow = true;
       child.material.side = THREE.DoubleSide;
+
     }
   }) // loads shadows
 
   return (
     <Suspense>
       <primitive
-        {...props}
         scale={props.scale}
         object={model.scene}
-        transparent={false}
         />
       </Suspense>
   )
-
 }
 
 export default Model
