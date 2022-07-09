@@ -1,16 +1,14 @@
-import React, {lazy, Suspense} from 'react';
+import React, { Suspense} from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useBox } from '@react-three/cannon';
-import { FrontSide } from 'three';
 
 const Model = props =>{
-
 
   const model = useLoader(
     GLTFLoader, props.path
   ) //loads file
+
 
     let mixer;
     if (model.animations.length > 0) {
@@ -19,7 +17,7 @@ const Model = props =>{
         const action = mixer.clipAction(clip);
         action.play();
       })
-    }
+    } // animations
 
     useFrame((scene, delta)=> {
       mixer?.update(delta)
@@ -34,10 +32,13 @@ const Model = props =>{
   }) // loads shadows
 
   return (
+    <Suspense>
       <primitive
+        {...props}
         scale={props.scale}
         object={model.scene}
-      /> // model render
+        />
+      </Suspense>
   )
 
 }
