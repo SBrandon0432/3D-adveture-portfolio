@@ -23,6 +23,7 @@ const Sun = (props) => {
       ref = {ref}
       {...props}
       >
+
         <Suspense>
           <Model
             path = {'/Models/sun/scene.gltf'}
