@@ -3,7 +3,7 @@ import { useFrame, useThree } from "react-three-fiber";
 import * as THREE from 'three'
 import BulbPointLight from "../Lights/BulbPointLight";
 import MoveGoblin from "./MoveGoblin";
-const Model = lazy(() => import("../Model"));
+const Model = lazy(() => import("../Utility/Model"));
 
 
 const Goblin = (props) => {
