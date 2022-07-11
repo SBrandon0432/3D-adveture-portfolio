@@ -1,13 +1,24 @@
+//-------Libraries / tools
 import React,{Suspense, useState} from 'react';
+import * as THREE from 'three'
 import {Canvas} from 'react-three-fiber';
 import { Physics } from "@react-three/cannon";
 import { OrbitControls } from '@react-three/drei';
-import Background from '../components/Background';
+
+//----------goblin Model
 import Goblin from '../components/Goblin/Goblin';
-import BoundingBox from '../components/BoundingBox';
+
+//----------Scenery
+import JapaneseHouse from '../components/Scenery/JapaneseHouse';
+import Background from '../components/Scenery/Background';
+
+//----------Utility
 import BulbPointLight from '../components/Lights/BulbPointLight';
-import * as THREE from 'three'
-import JapaneseHouse from '../components/JapaneseHouse';
+import BoundingBox from '../components/Utility/BoundingBox';
+
+
+
+
 
 function App() {
 

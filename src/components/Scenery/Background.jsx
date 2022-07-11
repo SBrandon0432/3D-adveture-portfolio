@@ -1,7 +1,7 @@
-import React, {useRef, useMemo} from "react";
-import { ReactThreeFiber, Canvas, useFrame, extend, useThree, useLoader } from 'react-three-fiber';
+import React from "react";
+import { useLoader } from 'react-three-fiber';
 import * as THREE from 'three';
-import nebula from '../Assets/nebula.jpeg'
+import nebula from '../../Assets/nebula.jpeg';
 
 const Background = (props) => {
 

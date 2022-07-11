@@ -1,6 +1,6 @@
 import React,{lazy, Suspense} from "react";
 import * as THREE from 'three';
-const Model = lazy(() => import("./Utility/Model"));
+const Model = lazy(() => import("../Utility/Model"));
 
 
 const JapaneseHouse = (props) => {
