@@ -7,13 +7,18 @@ const Model = lazy(() => import("../Utility/Model"));
 const MoveGoblin = (props) => {
   const ref = useRef();
   const {camera, scene } = useThree();
-  const [moveSpeed, setMoveSpeed] = useState(0.05)
+  const [moveSpeed, setMoveSpeed] = useState(0.1)
+  const [cameraMove, setcameraMove] = useState(0.09999)
+
 
 
   useFrame((state)=> {
     state.camera.lookAt(ref.current.position)
     ref.current.position.z -= moveSpeed
-    camera.position.x -= moveSpeed
+    camera.position.x -= cameraMove
+    camera.position.z -= 0.007
+
+
   })
 
   return (
