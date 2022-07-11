@@ -25,13 +25,13 @@ function App() {
 
         <Bulb  position={[0,6,0]} color={'white'}/>
         <Orbit/>
-        <axesHelper/>
+        <axesHelper args={[5,5,5]}/>
 
         <Physics>
             <BoundingBox visible>
              <JapaneseHouse
-              position={[0,8,5]}
-              rotation={[0,0,0]}
+              position={[-20,8,5]}
+              rotation={[0,-90,0]}
              />
             </BoundingBox>
           </Physics>
@@ -39,7 +39,10 @@ function App() {
 
           <Physics>
             <BoundingBox visible>
-             <Goblin />
+             <Goblin
+                position={[0,0,0]}
+                rotation={[0, 90, 0]}
+             />
             </BoundingBox>
           </Physics>
 

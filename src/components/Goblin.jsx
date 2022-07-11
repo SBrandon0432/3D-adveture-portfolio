@@ -8,7 +8,9 @@ const Goblin = (props) => {
 
 
   return (
-    <group rotation={[0, 90, 0]}>
+    <group
+      {...props}
+    >
       <Suspense>
         <Model
           path={'/desert_racer/scene.gltf'}
