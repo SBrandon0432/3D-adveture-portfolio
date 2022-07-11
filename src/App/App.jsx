@@ -17,7 +17,7 @@ function App() {
     <div className='App'>
 
       <Canvas
-        camera = {[7,7,7]}
+        camera = {{position:[-2.4,0.5,4.8]}}
         shadows
         className='canvas'
       >
@@ -30,7 +30,7 @@ function App() {
         <Physics>
             <BoundingBox visible>
              <JapaneseHouse
-              position={[-9,14,-26]}
+              position={[-10,14,-26]}
               rotation={[0,Math.PI,0]}
              />
             </BoundingBox>

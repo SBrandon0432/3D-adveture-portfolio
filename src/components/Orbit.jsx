@@ -10,7 +10,7 @@ const Orbit = (props) => {
   } = useThree();
   const ref = useRef();
   useFrame(()=>ref.current.update() )
-
+    console.log(camera.position)
   return (
     <orbitControls
       attach='orbitControls'

@@ -5,10 +5,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useGLTF  } from '@react-three/drei'
 
 const Model = props =>{
-
-  // const model = useLoader(
-  //   GLTFLoader, props.path
-  // ) //loads file
     const model = useGLTF(props.path)
 
 
@@ -27,7 +23,7 @@ const Model = props =>{
 
   model.scene.traverse(child => {
     if (child.isMesh) {
-      console.log(child.material, 'mesh')
+      // console.log(child.material, 'mesh')
 
       if (child.material.name === 'Grnd') {
         child.material.visible = false // turns bikes shadow off for right now.
