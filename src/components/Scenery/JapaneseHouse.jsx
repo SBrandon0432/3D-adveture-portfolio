@@ -14,7 +14,7 @@ const JapaneseHouse = (props) => {
       >
       <Suspense>
         <Model
-          path={'/mobile_home/scene.gltf'}
+          path={'/Models/mobile_home/scene.gltf'}
           scale={new Array(3).fill(.9)}
           />
       </Suspense>
