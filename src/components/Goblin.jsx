@@ -13,11 +13,6 @@ const Goblin = (props) => {
         <Model
           path={'/desert_racer/scene.gltf'}
           scale={new Array(3).fill(.04)}
-          side={THREE.FrontSide}
-          transparent={false}
-          opacity={1}
-          depthWrite={true}
-          depthTest={true}
           />
       </Suspense>
     </group>

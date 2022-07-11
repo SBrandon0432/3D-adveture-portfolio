@@ -7,6 +7,7 @@ import Goblin from '../components/Goblin';
 import BoundingBox from '../components/BoundingBox';
 import Bulb from '../components/Bulb';
 import * as THREE from 'three'
+import JapaneseHouse from '../components/JapaneseHouse';
 
 function App() {
 
@@ -26,6 +27,15 @@ function App() {
         <Orbit/>
         <axesHelper/>
 
+        <Physics>
+            <BoundingBox visible>
+             <JapaneseHouse
+              position={[0,8,5]}
+              rotation={[0,0,0]}
+             />
+            </BoundingBox>
+          </Physics>
+
 
           <Physics>
             <BoundingBox visible>
@@ -39,9 +49,9 @@ function App() {
         </Suspense>
 
         <mesh position={[0,-2,0]}>
-      <boxBufferGeometry args={[5,1,5]} />
-      <meshPhysicalMaterial color={'black'}/>
-    </mesh>
+           <boxBufferGeometry args={[5,1,5]} />
+           <meshPhysicalMaterial color={'black'}/>
+       </mesh>
 
 
 
