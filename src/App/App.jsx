@@ -1,4 +1,4 @@
-import React,{Suspense} from 'react';
+import React,{Suspense, useState} from 'react';
 import {Canvas} from 'react-three-fiber';
 import { Physics, Debug } from "@react-three/cannon";
 import Background from '../components/Background';
@@ -8,9 +8,10 @@ import BoundingBox from '../components/BoundingBox';
 import Bulb from '../components/Bulb';
 import * as THREE from 'three'
 import JapaneseHouse from '../components/JapaneseHouse';
+import MoveGoblin from '../components/MoveBiker';
 
 function App() {
-
+  const [isMove, setIsMove] = useState(false)
 
 
   return (
@@ -37,14 +38,29 @@ function App() {
           </Physics>
 
 
-          <Physics>
+          {
+            isMove ?
+              <Physics>
+              <BoundingBox visible>
+               <MoveGoblin
+                  position={[0,0,0]}
+                  rotation={[0, 190, 0]}
+               />
+              </BoundingBox>
+            </Physics>
+            :  <Physics>
             <BoundingBox visible>
              <Goblin
                 position={[0,0,0]}
                 rotation={[0, 190, 0]}
+                move={setIsMove}
              />
             </BoundingBox>
           </Physics>
+          }
+
+
+
 
 
         <Suspense>

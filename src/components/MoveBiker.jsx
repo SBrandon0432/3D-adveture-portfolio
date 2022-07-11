@@ -10,17 +10,15 @@ const Goblin = (props) => {
   const {camera } = useThree();
   console.log(camera)
 
-  // useFrame((state)=> {
-  //   ref.current.position.x -= 0.01
+  useFrame((state)=> {
+    ref.current.position.x -= 0.01
 
-  // })
-
+  })
 
   return (
     <group
       {...props}
       ref={ref}
-      onClick={()=> props.move(true)}
     >
       <Suspense>
         <Model
