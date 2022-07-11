@@ -8,13 +8,6 @@ const Model = lazy(() => import("./Model"));
 const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
-  console.log(camera)
-
-  // useFrame((state)=> {
-  //   ref.current.position.x -= 0.01
-
-  // })
-
 
   return (
     <group

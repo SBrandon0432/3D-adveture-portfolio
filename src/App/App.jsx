@@ -14,7 +14,6 @@ import MoveGoblin from '../components/MoveBiker';
 function App() {
   const [isMove, setIsMove] = useState(false)
 
-
   return (
     <div className='App'>
 
@@ -41,23 +40,29 @@ function App() {
 
           {
             isMove ?
+            <group >
               <Physics>
-              <BoundingBox visible>
-               <MoveGoblin
-                  position={[0,0,0]}
-                  rotation={[0, 190, 0]}
-               />
+               <BoundingBox visible>
+                <MoveGoblin
+                    position={[0,0,0]}
+                    rotation={[0, 190, 0]}
+                    />
               </BoundingBox>
             </Physics>
-            :  <Physics>
+            </group>
+            :
+            <group>
+
+            <Physics>
             <BoundingBox visible>
              <Goblin
                 position={[0,0,0]}
                 rotation={[0, 190, 0]}
                 move={setIsMove}
-             />
+                />
             </BoundingBox>
           </Physics>
+          </group>
           }
 
 

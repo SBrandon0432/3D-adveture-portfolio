@@ -7,14 +7,15 @@ const Model = lazy(() => import("./Model"));
 
 const Goblin = (props) => {
   const ref = useRef();
-  const {camera } = useThree();
+  const {camera, scene } = useThree();
   console.log(camera)
 
+
+
   useFrame((state)=> {
+    state.camera.lookAt(ref.current.position)
     ref.current.position.x -= 0.01
-    camera.position.z = 1
-    camera.position.y = 1
-    camera.position.x -= .01
+    camera.position.x -=0.01
 
   })
 
