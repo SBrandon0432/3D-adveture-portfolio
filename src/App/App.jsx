@@ -30,7 +30,6 @@ function App() {
         shadows
         className='canvas'
       >
-        {/* <ambientLight intensity={1.15} position={[0,10,0]}/> */}
 
         <OrbitControls />
         <axesHelper args={[5,5,5]}/>
@@ -48,7 +47,6 @@ function App() {
                 rotation={[0, 190, 0]}
                 />
         </Physics>
-
 
         <Suspense>
          <Background/>
