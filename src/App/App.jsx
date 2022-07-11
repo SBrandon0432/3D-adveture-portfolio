@@ -26,15 +26,22 @@ function App() {
 
   return (
     <div className='App'>
-
+      <div style={{background: 'black'}}>
+        <h1 style={{
+          textAlign: 'center',
+          color: 'red'
+        }}>
+          MAY TAKE UP TO 1-2 MIN TO LOAD, PLEASE WAIT! CLICK RIDER TO START ADVENTURE
+        </h1>
+      </div>
       <Canvas
         camera = {{position:[-2.4,0.5,4.8]}}
         shadows
         className='canvas'
       >
 
-          <Orbit/>
-          {/* <OrbitControls /> */}
+          {/* <Orbit/> */}
+          <OrbitControls />
           <axesHelper args={[5,5,5]}/>
 
           <Physics>
