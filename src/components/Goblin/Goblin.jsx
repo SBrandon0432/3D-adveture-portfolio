@@ -3,6 +3,7 @@ import { useFrame, useThree } from "react-three-fiber";
 import * as THREE from 'three'
 import MoveGoblin from "./MoveGoblin";
 import GoblinStillLights from "./GoblinStillLights";
+import EffectsGoblin from "../Effects/EffectsGoblin";
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -30,6 +31,7 @@ const Goblin = (props) => {
               />
         }
       </Suspense>
+      <EffectsGoblin/>
     </group >
   )
 }

@@ -49,7 +49,7 @@ function App() {
                   position={[0,0,0]}
                   rotation={[0, 190, 0]}
                   />
-          </Physics>
+           </Physics>
 
           <Suspense>
           <Background/>
