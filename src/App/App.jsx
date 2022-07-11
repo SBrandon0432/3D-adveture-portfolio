@@ -16,6 +16,9 @@ import Background from '../components/Scenery/Background';
 import BulbPointLight from '../components/Lights/BulbPointLight';
 import BoundingBox from '../components/Utility/BoundingBox';
 
+//-------Development only
+import Orbit from '../components/Utility/Orbit';  // use drei for deployment
+
 
 
 
@@ -30,7 +33,8 @@ function App() {
         className='canvas'
       >
 
-          <OrbitControls />
+          <Orbit/>
+          {/* <OrbitControls /> */}
           <axesHelper args={[5,5,5]}/>
 
           <Physics>
