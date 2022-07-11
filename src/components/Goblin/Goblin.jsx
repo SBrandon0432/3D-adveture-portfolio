@@ -26,7 +26,7 @@ const Goblin = (props) => {
             />
             :
             <Model
-              path={'/desert_racer/scene.gltf'}
+              path={'/Models/desert_racer/scene.gltf'}
               scale={new Array(3).fill(.028)}
               />
         }

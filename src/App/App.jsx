@@ -30,26 +30,26 @@ function App() {
         className='canvas'
       >
 
-        <OrbitControls />
-        <axesHelper args={[5,5,5]}/>
-
-        <Physics>
-             <JapaneseHouse
-              position={[-10,14,-26]}
-              rotation={[0,Math.PI,0]}
-             />
-          </Physics>
+          <OrbitControls />
+          <axesHelper args={[5,5,5]}/>
 
           <Physics>
-            <Goblin
-                position={[0,0,0]}
-                rotation={[0, 190, 0]}
+              <JapaneseHouse
+                position={[-10,14,-26]}
+                rotation={[0,Math.PI,0]}
                 />
-        </Physics>
+            </Physics>
 
-        <Suspense>
-         <Background/>
-        </Suspense>
+            <Physics>
+              <Goblin
+                  position={[0,0,0]}
+                  rotation={[0, 190, 0]}
+                  />
+          </Physics>
+
+          <Suspense>
+          <Background/>
+          </Suspense>
 
       </Canvas>
     </div>
