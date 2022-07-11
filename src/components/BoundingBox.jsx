@@ -11,7 +11,7 @@ const BoundingBox = ({
 
 
   const [ref, api] = useBox(()=>({mass:0, args: dims, position: position}))
-  console.log(ref, 'boundiong box')
+
   return (
     <group ref={ref} api={api}>
       <mesh scale={dims} visible={visible}>
