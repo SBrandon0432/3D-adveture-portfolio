@@ -1,15 +1,13 @@
 import React,{Suspense, useState} from 'react';
 import {Canvas} from 'react-three-fiber';
-import { Physics, Debug } from "@react-three/cannon";
+import { Physics } from "@react-three/cannon";
 import { OrbitControls } from '@react-three/drei';
 import Background from '../components/Background';
-import Orbit from '../components/Orbit';
-import Goblin from '../components/Goblin';
+import Goblin from '../components/Goblin/Goblin';
 import BoundingBox from '../components/BoundingBox';
-import Bulb from '../components/Bulb';
+import BulbPointLight from '../components/Lights/BulbPointLight';
 import * as THREE from 'three'
 import JapaneseHouse from '../components/JapaneseHouse';
-import MoveGoblin from '../components/MoveBiker';
 
 function App() {
 
@@ -51,32 +49,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// {
-//   isMove ?
-//   <group >
-//     <Physics>
-//      <BoundingBox visible>
-//       <MoveGoblin
-//           position={[0,0,0]}
-//           rotation={[0, 190, 0]}
-//           />
-//     </BoundingBox>
-//   </Physics>
-//   </group>
-//   :
-//   <group>
-
-//   <Physics>
-//   <BoundingBox visible>
-//    <Goblin
-//       position={[0,0,0]}
-//       rotation={[0, 190, 0]}
-//       move={setIsMove}
-//       />
-//   </BoundingBox>
-// </Physics>
-// </group>
-// }

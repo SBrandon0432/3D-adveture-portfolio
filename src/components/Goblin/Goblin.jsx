@@ -1,9 +1,9 @@
 import React, {lazy, Suspense, useRef, useState} from "react";
 import { useFrame, useThree } from "react-three-fiber";
 import * as THREE from 'three'
-import Bulb from "./Bulb";
-import MoveGoblin from "./MoveBiker";
-const Model = lazy(() => import("./Model"));
+import BulbPointLight from "../Lights/BulbPointLight";
+import MoveGoblin from "./MoveGoblin";
+const Model = lazy(() => import("../Model"));
 
 
 const Goblin = (props) => {
@@ -18,7 +18,7 @@ const Goblin = (props) => {
       onClick={()=> setIsMove(true)}
     >
 
-      <Bulb  position={[0, 3, 0]} color={'red'}/>
+      <BulbPointLight  position={[0, 3, 0]} color={'red'}/>
       <Suspense>
         {
           isMove ?

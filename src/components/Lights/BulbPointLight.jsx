@@ -1,11 +1,11 @@
 import React from "react";
 
 
-const Bulb = (props) => {
+const BulbPointLight = (props) => {
 
 
   return (
-    <mesh className='Bulb' {...props}>
+    <mesh className='BulbPointLight' {...props}>
       <pointLight intensity={2.5} color={props.color} />
       <sphereGeometry args={[0.5]}/>
       <meshPhongMaterial emissive={'gold'}/>
@@ -14,4 +14,4 @@ const Bulb = (props) => {
 }
 
 
-export default Bulb
+export default BulbPointLight
