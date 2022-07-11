@@ -14,7 +14,7 @@ const Goblin = (props) => {
       <Suspense>
         <Model
           path={'/desert_racer/scene.gltf'}
-          scale={new Array(3).fill(.04)}
+          scale={new Array(3).fill(.028)}
           />
       </Suspense>
     </group>

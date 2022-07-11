@@ -30,9 +30,8 @@ function App() {
         <Physics>
             <BoundingBox visible>
              <JapaneseHouse
-              // position={[-20,8,5]}
-              position={[0,7,-20]}
-              rotation={[0,90,0]}
+              position={[-9,14,-26]}
+              rotation={[0,Math.PI,0]}
              />
             </BoundingBox>
           </Physics>
@@ -51,13 +50,6 @@ function App() {
         <Suspense>
          <Background/>
         </Suspense>
-
-        <mesh position={[0,-2,0]}>
-           <boxBufferGeometry args={[5,1,5]} />
-           <meshPhysicalMaterial color={'black'}/>
-       </mesh>
-
-
 
       </Canvas>
     </div>
