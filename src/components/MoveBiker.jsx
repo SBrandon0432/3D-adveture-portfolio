@@ -11,12 +11,13 @@ const Goblin = (props) => {
   const [moveSpeed, setMoveSpeed] = useState(0.05)
 
 
-
   useFrame((state)=> {
-    state.camera.lookAt(ref.current.position)
-    ref.current.position.x -= moveSpeed
-    camera.position.x -= moveSpeed
+    // console.log(ref.current.position, 'ref potion in move goblin')
+    // console.log(state.camera.position, 'camera potion in move goblin')
 
+    state.camera.lookAt(ref.current.position)
+    ref.current.position.z -= moveSpeed
+    camera.position.x -= moveSpeed
   })
 
   return (

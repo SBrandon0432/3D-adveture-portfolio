@@ -27,21 +27,17 @@ function App() {
         <axesHelper args={[5,5,5]}/>
 
         <Physics>
-            <BoundingBox visible>
              <JapaneseHouse
               position={[-10,14,-26]}
               rotation={[0,Math.PI,0]}
              />
-            </BoundingBox>
           </Physics>
 
           <Physics>
-            <BoundingBox visible>
             <Goblin
                 position={[0,0,0]}
                 rotation={[0, 190, 0]}
                 />
-          </BoundingBox>
         </Physics>
 
 

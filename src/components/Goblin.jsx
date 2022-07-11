@@ -10,21 +10,19 @@ const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(false);
-
+  console.log(props)
   return (
     <group
       {...props}
       ref={ref}
       onClick={()=> setIsMove(true)}
     >
+
       <Bulb  position={[0, 3, 0]} color={'red'}/>
       <Suspense>
-
         {
           isMove ?
             <MoveGoblin
-              position={props.position}
-              rotation={props.rotation}
             />
             :
             <Model
