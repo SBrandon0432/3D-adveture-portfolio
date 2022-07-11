@@ -1,7 +1,7 @@
 import React, {lazy, Suspense, useRef, useState} from "react";
 import { useFrame, useThree } from "react-three-fiber";
 import * as THREE from 'three'
-import BulbPointLight from "../Lights/BulbPointLight";
+import GoblinMovingLights from "./GoblinMovingLights";
 const Model = lazy(() => import("../Utility/Model"));
 
 const MoveGoblin = (props) => {
@@ -21,6 +21,7 @@ const MoveGoblin = (props) => {
       {...props}
       ref={ref}
     >
+      <GoblinMovingLights/>
       <Suspense>
         <Model
           path={'/Models/desert_racer/scene.gltf'}

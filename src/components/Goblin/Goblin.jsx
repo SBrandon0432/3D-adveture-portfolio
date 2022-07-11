@@ -11,7 +11,7 @@ const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(false);
-  console.log(props)
+
   return (
     <group
       {...props}
