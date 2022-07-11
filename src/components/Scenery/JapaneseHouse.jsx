@@ -15,8 +15,9 @@ const JapaneseHouse = (props) => {
       {...props}
       >
         <Sun
-          position={[0,0,0]}
-
+          position={[-50,7,20]}
+          scale={new Array(3).fill(1.2)}
+          emissive={'pink'}
           />
       <Suspense>
         <Model
