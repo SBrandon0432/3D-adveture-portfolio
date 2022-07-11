@@ -1,5 +1,6 @@
 import React,{lazy, Suspense} from "react";
 import * as THREE from 'three';
+import Dragables from "../Utility/DragControls";
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -18,7 +19,9 @@ const JapaneseHouse = (props) => {
           scale={new Array(3).fill(.9)}
           animate={true}
           />
+
       </Suspense>
+
     </group>
   )
 }

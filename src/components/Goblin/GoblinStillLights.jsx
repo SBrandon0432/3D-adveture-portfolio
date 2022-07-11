@@ -8,7 +8,7 @@ import Dragables from "../Utility/DragControls";
 const GoblinStillLights = (props) => {
 
   return (
-    <group className = 'Goblin_Still_lights'>
+    <group className = 'Goblin_Still_lights' >
 
       <BulbPointLight
           position={[-5.5, 4.3, -8.1]}
@@ -16,6 +16,7 @@ const GoblinStillLights = (props) => {
           emissive={''}
           intensity={0.6}
           radius={[0]}
+
           />
 
 
@@ -26,7 +27,6 @@ const GoblinStillLights = (props) => {
           intensity={2.1}
           radius={[0]}
 
-
           />
 
 
@@ -36,6 +36,7 @@ const GoblinStillLights = (props) => {
           emissive={''}
           intensity={0.6}
           radius={[0]}
+
           />
 
 
