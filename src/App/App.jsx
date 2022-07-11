@@ -22,10 +22,9 @@ function App() {
         shadows
         className='canvas'
       >
-        <ambientLight intensity={2.15} position={[0,10,0]}/>
+        {/* <ambientLight intensity={1.15} position={[0,10,0]}/> */}
 
-        <Bulb  position={[0,6,0]} color={'white'}/>
-         <OrbitControls />
+        <OrbitControls />
         <axesHelper args={[5,5,5]}/>
 
         <Physics>
