@@ -12,7 +12,6 @@ import JapaneseHouse from '../components/JapaneseHouse';
 import MoveGoblin from '../components/MoveBiker';
 
 function App() {
-  const [isMove, setIsMove] = useState(false)
 
   return (
     <div className='App'>
@@ -36,36 +35,14 @@ function App() {
             </BoundingBox>
           </Physics>
 
-
-          {
-            isMove ?
-            <group >
-              <Physics>
-               <BoundingBox visible>
-                <MoveGoblin
-                    position={[0,0,0]}
-                    rotation={[0, 190, 0]}
-                    />
-              </BoundingBox>
-            </Physics>
-            </group>
-            :
-            <group>
-
-            <Physics>
+          <Physics>
             <BoundingBox visible>
-             <Goblin
+            <Goblin
                 position={[0,0,0]}
                 rotation={[0, 190, 0]}
-                move={setIsMove}
                 />
-            </BoundingBox>
-          </Physics>
-          </group>
-          }
-
-
-
+          </BoundingBox>
+        </Physics>
 
 
         <Suspense>
@@ -78,3 +55,32 @@ function App() {
 }
 
 export default App;
+
+
+
+// {
+//   isMove ?
+//   <group >
+//     <Physics>
+//      <BoundingBox visible>
+//       <MoveGoblin
+//           position={[0,0,0]}
+//           rotation={[0, 190, 0]}
+//           />
+//     </BoundingBox>
+//   </Physics>
+//   </group>
+//   :
+//   <group>
+
+//   <Physics>
+//   <BoundingBox visible>
+//    <Goblin
+//       position={[0,0,0]}
+//       rotation={[0, 190, 0]}
+//       move={setIsMove}
+//       />
+//   </BoundingBox>
+// </Physics>
+// </group>
+// }
