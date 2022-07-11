@@ -19,8 +19,6 @@ const GoblinMovingLights = (props) => {
           radius={[0]}
           />
 
-
-
       <BulbPointLight
           position={[-5,4,4]}
           color={'white'}
