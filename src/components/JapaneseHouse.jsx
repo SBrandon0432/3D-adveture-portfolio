@@ -16,7 +16,7 @@ const JapaneseHouse = (props) => {
       <Suspense>
         <Model
           path={'/mobile_home/scene.gltf'}
-          scale={new Array(3).fill(.7)}
+          scale={new Array(3).fill(.9)}
           />
       </Suspense>
     </group>

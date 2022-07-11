@@ -30,8 +30,9 @@ function App() {
         <Physics>
             <BoundingBox visible>
              <JapaneseHouse
-              position={[-20,8,5]}
-              rotation={[0,-90,0]}
+              // position={[-20,8,5]}
+              position={[0,7,-20]}
+              rotation={[0,90,0]}
              />
             </BoundingBox>
           </Physics>
@@ -41,7 +42,7 @@ function App() {
             <BoundingBox visible>
              <Goblin
                 position={[0,0,0]}
-                rotation={[0, 90, 0]}
+                rotation={[0, 190, 0]}
              />
             </BoundingBox>
           </Physics>
