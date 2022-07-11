@@ -33,8 +33,8 @@ function App() {
         className='canvas'
       >
 
-          <Orbit/>
-          {/* <OrbitControls /> */}
+          {/* <Orbit/> */}
+          <OrbitControls />
           <axesHelper args={[5,5,5]}/>
 
           <Physics>

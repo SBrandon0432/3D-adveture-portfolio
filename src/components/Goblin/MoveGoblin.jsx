@@ -25,6 +25,7 @@ const MoveGoblin = (props) => {
         <Model
           path={'/Models/desert_racer/scene.gltf'}
           scale={new Array(3).fill(.028)}
+          animate={true}
           />
       </Suspense>
     </group>

@@ -15,7 +15,7 @@ const Goblin = (props) => {
     <group
       {...props}
       ref={ref}
-      onClick={()=> setIsMove(null)}
+      onClick={()=> setIsMove(true)}
     >
       <GoblinStillLights />
       <Suspense>

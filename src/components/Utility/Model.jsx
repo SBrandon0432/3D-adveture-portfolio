@@ -7,15 +7,17 @@ import { useGLTF  } from '@react-three/drei'
 const Model = props =>{
     const model = useGLTF(props.path)
 
-
     let mixer;
+
+    if (props.animate) {
     if (model.animations.length > 0) {
       mixer = new THREE.AnimationMixer(model.scene);
       model.animations.forEach((clip, index) => {
         const action = mixer.clipAction(clip);
         action.play();
       })
-    } // animations
+    }
+  } // animations on/off
 
     useFrame((scene, delta)=> {
       mixer?.update(delta)
