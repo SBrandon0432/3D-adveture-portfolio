@@ -1,6 +1,7 @@
 import React,{Suspense, useState} from 'react';
 import {Canvas} from 'react-three-fiber';
 import { Physics, Debug } from "@react-three/cannon";
+import { OrbitControls } from '@react-three/drei';
 import Background from '../components/Background';
 import Orbit from '../components/Orbit';
 import Goblin from '../components/Goblin';
@@ -25,7 +26,7 @@ function App() {
         <ambientLight intensity={2.15} position={[0,10,0]}/>
 
         <Bulb  position={[0,6,0]} color={'white'}/>
-        <Orbit/>
+         <OrbitControls />
         <axesHelper args={[5,5,5]}/>
 
         <Physics>

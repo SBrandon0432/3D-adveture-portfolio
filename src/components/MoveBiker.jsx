@@ -12,6 +12,9 @@ const Goblin = (props) => {
 
   useFrame((state)=> {
     ref.current.position.x -= 0.01
+    camera.position.z = 1
+    camera.position.y = 1
+    camera.position.x -= .01
 
   })
 
