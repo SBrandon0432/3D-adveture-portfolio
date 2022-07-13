@@ -31,7 +31,7 @@ const Goblin = (props) => {
               />
         }
       </Suspense>
-      <EffectsGoblin/>
+      {/* <EffectsGoblin/> */}
     </group >
   )
 }

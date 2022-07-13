@@ -11,6 +11,7 @@ import Goblin from '../components/Goblin/Goblin';
 //----------Scenery
 import JapaneseHouse from '../components/Scenery/JapaneseHouse';
 import Background from '../components/Scenery/Background';
+import NatureStop from '../components/Scenery/NatureStop';
 
 //----------Utility
 import BulbPointLight from '../components/Lights/BulbPointLight';
@@ -61,6 +62,13 @@ function App() {
           <Suspense>
            <Background/>
           </Suspense>
+
+        <Physics>
+          <NatureStop
+            position={[-40,0,0]}
+            rotation={[0,3.25,0]}
+          />
+        </Physics>
 
       </Canvas>
     </div>
