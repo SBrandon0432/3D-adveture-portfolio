@@ -1,0 +1,8 @@
+Model Information:
+* title:	Space Globe
+* source:	https://sketchfab.com/3d-models/space-globe-1d4279aaae7d4125bed6859c84837e2b
+* author:	magicwendric (https://sketchfab.com/magicwendric)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
