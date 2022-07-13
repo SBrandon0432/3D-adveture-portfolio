@@ -10,13 +10,13 @@ const Model = lazy(() => import("../Utility/Model"));
 const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
-  const [isMove, setIsMove] = useState(false);
+  const [isMove, setIsMove] = useState(null);
 
   return (
     <group
       {...props}
       ref={ref}
-      onClick={()=> setIsMove(true)}
+      onClick={()=> setIsMove(null)}
     >
       <GoblinStillLights />
       <Suspense>
