@@ -3,27 +3,30 @@ import { useFrame, useThree,  } from "react-three-fiber";
 import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 import GoblinMovingLights from "./GoblinMovingLights";
+import BoundingBox from "../Utility/BoundingBox";
 const Model = lazy(() => import("../Utility/Model"));
+
+
 
 const MoveGoblin = (props) => {
   const ref = useRef();
 
-  const {camera, scene } = useThree();
+  const { camera, scene } = useThree();
   const [moveSpeed, setMoveSpeed] = useState(0.1)
   const [cameraMove, setcameraMove] = useState(0.09999)
-
+  const vec = new THREE.Vector3();
+  console.log(scene.orbitControls)
   useFrame((state)=> {
-    // console.log(ref.current)
-    const arr = [
-      ref.current.position.x,
-      ref.current.position.y,
-      ref.current.position.z,
-    ]
+
+    const {x,y,z} = ref.current.position
     if (ref.current.position.z > -40) {
       ref.current.position.z -= moveSpeed
-      // camera.position.x -= cameraMove
+
+      camera.position.lerp(vec.set(x,y,z), .01)
+      scene.orbitControls.target.lerp(vec.set(x,y,z), .01);
+      // state.camera.position.lerp(vec.set(z,y,x), .01)
+      // scene.orbitControls.update();
     }
-    camera.lookAt(...arr)
   })
 
   return (
@@ -33,6 +36,11 @@ const MoveGoblin = (props) => {
     >
 
       <GoblinMovingLights/>
+      <BoundingBox
+        visible
+        dims={[4,4,4]}
+      >
+
       <Suspense>
         <Model
           path={'/Models/desert_racer/scene.gltf'}
@@ -40,6 +48,7 @@ const MoveGoblin = (props) => {
           animate={true}
           />
       </Suspense>
+          </BoundingBox >
     </group>
   )
 }

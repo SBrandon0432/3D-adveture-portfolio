@@ -42,7 +42,7 @@ function App() {
       >
 
           {/* <Orbit/> */}
-          <OrbitControls />
+          <OrbitControls attach={'orbitControls'}/>
           <axesHelper args={[5,5,5]}/>
 
           <Physics>

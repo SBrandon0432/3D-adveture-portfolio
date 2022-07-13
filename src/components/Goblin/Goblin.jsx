@@ -4,6 +4,7 @@ import * as THREE from 'three'
 import MoveGoblin from "./MoveGoblin";
 import GoblinStillLights from "./GoblinStillLights";
 import EffectsGoblin from "../Effects/EffectsGoblin";
+import BoundingBox from "../Utility/BoundingBox";
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -11,7 +12,7 @@ const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(null);
-  console.log(ref)
+
 
   return (
     <group
@@ -26,10 +27,17 @@ const Goblin = (props) => {
             <MoveGoblin
             />
             :
+            <BoundingBox
+            visible
+            dims={[5,5,5]}
+            color={'red'}
+            >
+
             <Model
               path={'/Models/desert_racer/scene.gltf'}
               scale={new Array(3).fill(.028)}
               />
+            </BoundingBox>
         }
       </Suspense>
       {/* <EffectsGoblin/> */}
