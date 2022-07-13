@@ -27,8 +27,8 @@ const JapaneseHouse = (props) => {
           />
 
         <Sign
-          position={[-12,-13.5,-29]}
-          scale={new Array(3).fill(1)}
+          position={[-14.4,-13.5,-27.21]}
+          scale={new Array(3).fill(1.1)}
           animate={true}
         />
 
