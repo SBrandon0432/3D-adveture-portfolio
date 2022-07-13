@@ -6,7 +6,6 @@ import BoundingBox from "../Utility/BoundingBox";
 import Dragables from "../Utility/DragControls";
 
 const GoblinMovingLights = (props) => {
-  console.log(props)
   return (
     <group className = 'goblin_moving_lights' >
 

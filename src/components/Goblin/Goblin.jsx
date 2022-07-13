@@ -11,12 +11,13 @@ const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(null);
+  console.log(ref)
 
   return (
     <group
       {...props}
       ref={ref}
-      onClick={()=> setIsMove(null)}
+      onClick={()=> setIsMove(true)}
     >
       <GoblinStillLights />
       <Suspense>

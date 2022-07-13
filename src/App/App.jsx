@@ -3,7 +3,7 @@ import React,{Suspense, useState} from 'react';
 import * as THREE from 'three'
 import {Canvas} from 'react-three-fiber';
 import { Physics } from "@react-three/cannon";
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, View } from '@react-three/drei';
 
 //----------goblin Model
 import Goblin from '../components/Goblin/Goblin';
@@ -36,7 +36,7 @@ function App() {
         </h1>
       </div>
       <Canvas
-        camera = {{position:[-2.4,0.5,4.8]}}
+        camera = {{position:[0,0,8]}}
         shadows
         className='canvas'
       >
@@ -65,7 +65,7 @@ function App() {
 
         <Physics>
           <NatureStop
-            position={[-40,0,0]}
+            position={[-40,5,-16]}
             rotation={[0,3.25,0]}
           />
         </Physics>
