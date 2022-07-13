@@ -36,7 +36,6 @@ function App() {
         </h1>
       </div>
       <Canvas
-        camera = {{position:[0,0,8]}}
         shadows
         className='canvas'
       >
