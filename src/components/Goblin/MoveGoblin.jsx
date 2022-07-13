@@ -11,19 +11,16 @@ const Model = lazy(() => import("../Utility/Model"));
 
 const MoveGoblin = (props) => {
   const ref = useRef();
-
   const { camera, scene } = useThree();
-  const [moveSpeed, setMoveSpeed] = useState(0.1)
+  const [moveSpeed, setMoveSpeed] = useState(0.16)
 
-  const vec = new THREE.Vector3();
   console.log(scene.orbitControls)
   useFrame((state)=> {
 
-    const {x,y,z} = ref.current.position
     if (ref.current.position.z > -40) {
       ref.current.position.z -= moveSpeed
-      camera.position.lerp(CameraState.cameraPos, 0.0007)
-      scene.orbitControls.target.lerp(CameraState.target,0.0007)
+      camera.position.lerp(CameraState.cameraPos1, 0.007)
+      scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
       scene.orbitControls.update();
     }
   })

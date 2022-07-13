@@ -1,7 +1,7 @@
 //-------Libraries / tools
 import React,{Suspense, useState} from 'react';
 import * as THREE from 'three'
-import {Canvas} from 'react-three-fiber';
+import {Canvas, useThree} from 'react-three-fiber';
 import { Physics } from "@react-three/cannon";
 import { OrbitControls, View } from '@react-three/drei';
 
