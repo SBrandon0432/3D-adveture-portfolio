@@ -6,7 +6,9 @@ import { useGLTF  } from '@react-three/drei'
 
 const Model = props =>{
     const model = useGLTF(props.path)
-
+    if (props?.show) {
+      console.log(model, 'model')
+    }
     let mixer;
 
     if (props.animate) {

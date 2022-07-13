@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useState, useEffect} from "react";
+import React, {lazy, Suspense, useState, useEffect, useRef} from "react";
 import { useThree, useFrame } from "react-three-fiber";
 import BulbPointLight from "../Lights/BulbPointLight";
 const Model = lazy(()=> import('../Utility/Model'));
@@ -6,6 +6,11 @@ const Model = lazy(()=> import('../Utility/Model'));
 
 const NatureStop = (props) => {
 
+  const {scene} = useThree();
+  const ref = useRef();
+  useFrame((state)=> {
+    // console.log(ref)
+  })
 
 
   return (
@@ -14,6 +19,7 @@ const NatureStop = (props) => {
       position={props?.position}
       rotation={props?.rotation}
       {...props}
+      ref={ref}
     >
       <Suspense>
         <Model

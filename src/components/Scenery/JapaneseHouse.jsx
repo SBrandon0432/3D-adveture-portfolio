@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import Dragables from "../Utility/DragControls";
 import Sun from "./Sun";
 import BulbPointLight from "../Lights/BulbPointLight";
-
+import Sign from "./Sign";
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -24,8 +24,14 @@ const JapaneseHouse = (props) => {
         <Sun
           position={[-50,7,20]}
           scale={new Array(3).fill(1.2)}
-          emissive={'pink'}
           />
+
+        <Sign
+          position={[0,4,0]}
+          scale={new Array(3).fill(10000)}
+          animate={true}
+        />
+
       <Suspense>
         <Model
           path={'/Models/mobile_home/scene.gltf'}
