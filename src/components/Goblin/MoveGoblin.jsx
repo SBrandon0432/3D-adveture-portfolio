@@ -19,9 +19,9 @@ const MoveGoblin = (props) => {
 
     if (ref.current.position.z > -40) {
       ref.current.position.z -= moveSpeed
-      camera.position.lerp(CameraState.cameraPos1, 0.007)
-      scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
-      scene.orbitControls.update();
+      // camera.position.lerp(CameraState.cameraPos1, 0.007)
+      // scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
+      // scene.orbitControls.update();
     }
   })
 

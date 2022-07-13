@@ -26,7 +26,7 @@ const Sign = (props) => {
 
         <Suspense>
           <Model
-            path={'/Models/stylized_wood_signs/scene.gltf'}
+            path={'/Models/a_welcoming_sign/scene.gltf'}
             scale = {props?.scale}
             show={true}
             />
