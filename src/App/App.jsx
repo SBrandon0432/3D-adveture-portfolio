@@ -21,6 +21,10 @@ import BoundingBox from '../components/Utility/BoundingBox';
 import Orbit from '../components/Utility/Orbit';  // use drei for deployment
 
 
+//-------------text
+// import LandingSign from '../components/Texts/LandingSign';
+
+
 
 
 function App() {
@@ -35,6 +39,7 @@ function App() {
           MAY TAKE UP TO 1-2 MIN TO LOAD, PLEASE WAIT! CLICK RIDER TO START ADVENTURE
         </h1>
       </div>
+      <LandingSign />
       <Canvas
         shadows
         className='canvas'

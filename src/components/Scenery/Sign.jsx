@@ -11,10 +11,9 @@ const Sign = (props) => {
   } = useThree();
   const ref = useRef();
 
-  console.log(ref.current, 'sign')
+  console.log(scene.nodes, 'sign')
   useFrame((state)=> {
-    // ref.current.rotation.x += 0.0001
-    // ref.current.rotation.y += 0.001
+
   })
 
   return (
@@ -23,7 +22,6 @@ const Sign = (props) => {
       ref = {ref}
       {...props}
       >
-
         <Suspense>
           <Model
             path={'/Models/a_welcoming_sign/scene.gltf'}
