@@ -21,8 +21,7 @@ import BoundingBox from '../components/Utility/BoundingBox';
 import Orbit from '../components/Utility/Orbit';  // use drei for deployment
 
 
-//-------------text
-import LandingSign from '../components/Texts/LandingSign';
+
 
 
 

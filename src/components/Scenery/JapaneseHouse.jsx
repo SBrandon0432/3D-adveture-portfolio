@@ -1,6 +1,5 @@
 import React,{lazy, Suspense} from "react";
 import * as THREE from 'three';
-import Dragables from "../Utility/DragControls";
 import Sun from "./Sun";
 import BulbPointLight from "../Lights/BulbPointLight";
 import Sign from "./Sign";
