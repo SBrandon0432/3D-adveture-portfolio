@@ -11,7 +11,6 @@ const Sign = (props) => {
   } = useThree();
   const ref = useRef();
 
-  console.log(scene.nodes, 'sign')
   useFrame((state)=> {
 
   })
@@ -28,6 +27,7 @@ const Sign = (props) => {
             scale = {props?.scale}
             show={true}
             />
+
         </Suspense>
     </group>
   )

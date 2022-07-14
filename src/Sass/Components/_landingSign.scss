@@ -1,8 +1,11 @@
 .landing_sign {
   position: absolute;
-
+  display: inline-block;
+  top:  40%;
+  left: 50%;
+  z-index: 1;
   &--text {
-
+    font-size: 12rem;
   }
 
 }

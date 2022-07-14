@@ -16,6 +16,7 @@ const JapaneseHouse = (props) => {
       className='japanese_house'
       {...props}
       >
+
         <BulbPointLight
           position = {[-50,7,20]}
           color={'orange'}
@@ -29,8 +30,11 @@ const JapaneseHouse = (props) => {
         <Sign
           position={[-14.6,-13,-27.21]}
           scale={new Array(3).fill(1.16)}
-          animate={true}
+
         />
+        <mesh>
+
+        </mesh>
 
       <Suspense>
         <Model
