@@ -44,6 +44,9 @@ function App() {
       <Canvas
         shadows
         className='canvas'
+        gl = {{
+          // powerPreference: "high-performance",
+        }}
       >
 
           {/* <Orbit/> */}
@@ -67,13 +70,13 @@ function App() {
           <Suspense>
            <Background/>
           </Suspense>
-
+{/*
         <Physics>
           <NatureStop
             position={[-40,5,-16]}
             rotation={[0,3.25,0]}
           />
-        </Physics>
+        </Physics> */}
 
       </Canvas>
     </div>

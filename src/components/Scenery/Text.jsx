@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useRef } from "react";
 import { useFrame, useThree, extend } from "react-three-fiber";
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import {FrontLoader} from 'three/examples/jsm/loaders/FontLoader'
+import {FontLoader} from 'three/examples/jsm/loaders/FontLoader'
 const Model = lazy(()=> import('../Utility/Model'))
 extend({TextGeometry});
 
@@ -17,7 +17,7 @@ const Sign = (props) => {
   useFrame((state)=> {
 
   })
-    const font = new FrontLoader().parse(props.path);
+    const font = new FontLoader().parse(props.path);
 
   return (
     <group
@@ -27,10 +27,9 @@ const Sign = (props) => {
       >
         <mesh>
           <textGeometry
-            args={[]}
-            font={font}
+            args={['test']}
           />
-          <meshPhysicalMaterial/>
+          <meshLambertMaterial attach={'material'} color={'gold'}/>
         </mesh>
     </group>
   )

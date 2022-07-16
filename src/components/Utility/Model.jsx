@@ -6,9 +6,10 @@ import { useGLTF  } from '@react-three/drei'
 
 const Model = props =>{
     const model = useGLTF(props.path)
-    if (props?.show) {
-      console.log(model, 'model')
+    if (props?.consoleModel) {
+      console.log(model, `model from ${props?.path}`)
     }
+
     let mixer;
 
     if (props.animate) {
@@ -31,11 +32,11 @@ const Model = props =>{
 
       if (child.material.name === 'Grnd') {
         child.material.visible = false // turns bikes shadow off for right now.
-      } // bike
+      } // Goblin bike
 
       if (child.material.depthTest) {
         child.material.depthWrite=true;
-      } // bike
+      } // Goblin bike
 
       child.castShadow = true;
       child.receiveShadow = true;

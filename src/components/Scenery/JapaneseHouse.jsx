@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import Sun from "./Sun";
 import BulbPointLight from "../Lights/BulbPointLight";
 import Sign from "./Sign";
+import Text from '../Scenery/Text'
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -31,9 +32,11 @@ const JapaneseHouse = (props) => {
           scale={new Array(3).fill(1.16)}
 
         />
-        <mesh>
-
-        </mesh>
+          {/* <Text
+            position={[0,0,0]}
+            scale={new Array(3).fill(10.16)}
+            path={'/Font/smile_candy/Smile Candy.ttf'}
+            /> */}
 
       <Suspense>
         <Model
