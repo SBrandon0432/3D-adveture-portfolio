@@ -33,9 +33,12 @@ const JapaneseHouse = (props) => {
 
         />
           <Text
-            position={[0,0,0]}
-            scale={new Array(3).fill(10.16)}
+            position={[-10,-9.32,-19.4]}
+            rotation={[0,2.23,0]}
+            scale={new Array(3).fill(0.4)}
             path={'/Font/smile_candy/Smile Candy_Regular.json'}
+            color={'#00a2ff'}
+            emissiveColor={'#ffc800'}
             />
 
       <Suspense>

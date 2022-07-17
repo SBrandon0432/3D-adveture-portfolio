@@ -23,13 +23,22 @@ const Sign = (props) => {
   return (
     <group
       position={props?.position}
+      scale={props?.scale}
       ref = {ref}
-      {...props}
       >
         <mesh>
-          <Text3D font={props.path}>
-            test!
-            <meshLambertMaterial />
+          <Text3D
+            rotation={props?.rotation}
+            font={props?.path}
+            {...props}
+            >
+            GitHub!
+            <meshLambertMaterial
+              emissive={props?.emissiveColor}
+              color = {props?.color}
+              depthTest={true}
+              depthWrite={true}
+            />
           </Text3D>
         </mesh>
     </group>
