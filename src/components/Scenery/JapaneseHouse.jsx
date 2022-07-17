@@ -35,7 +35,7 @@ const JapaneseHouse = (props) => {
           <Text
             position={[0,0,0]}
             scale={new Array(3).fill(10.16)}
-            path={'/Font/smile_candy/Smile Candy.ttf'}
+            path={'/Font/smile_candy/Smile Candy_Regular.json'}
             />
 
       <Suspense>

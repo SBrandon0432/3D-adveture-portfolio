@@ -27,7 +27,7 @@ const Sign = (props) => {
       {...props}
       >
         <mesh>
-          <Text3D font={props.path} characters="abcdefghijklmnopqrstuvwxyz0123456789!">
+          <Text3D font={props.path}>
             test!
             <meshLambertMaterial />
           </Text3D>
