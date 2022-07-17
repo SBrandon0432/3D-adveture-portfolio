@@ -32,7 +32,6 @@ const MoveGoblin = (props) => {
 
       <GoblinMovingLights/>
       <BoundingBox
-        visible
         dims={[4,4,4]}
       >
 
