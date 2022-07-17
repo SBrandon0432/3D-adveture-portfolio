@@ -1,9 +1,10 @@
 import React, { lazy, Suspense, useRef } from "react";
-import { useFrame, useThree, extend } from "react-three-fiber";
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { useFrame, useThree, extend} from "react-three-fiber";
+// import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import {FontLoader} from 'three/examples/jsm/loaders/FontLoader'
+import { Text3D } from "@react-three/drei";
 const Model = lazy(()=> import('../Utility/Model'))
-extend({TextGeometry});
+// extend({TextGeometry});
 
 
 const Sign = (props) => {
@@ -17,7 +18,7 @@ const Sign = (props) => {
   useFrame((state)=> {
 
   })
-    const font = new FontLoader().parse(props.path);
+    const font = new FontLoader().parse(props?.path);
 
   return (
     <group
@@ -26,10 +27,10 @@ const Sign = (props) => {
       {...props}
       >
         <mesh>
-          <textGeometry
-            args={['test']}
-          />
-          <meshLambertMaterial attach={'material'} color={'gold'}/>
+          <Text3D font={props.path} characters="abcdefghijklmnopqrstuvwxyz0123456789!">
+            test!
+            <meshLambertMaterial />
+          </Text3D>
         </mesh>
     </group>
   )

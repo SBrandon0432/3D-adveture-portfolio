@@ -32,11 +32,11 @@ const JapaneseHouse = (props) => {
           scale={new Array(3).fill(1.16)}
 
         />
-          {/* <Text
+          <Text
             position={[0,0,0]}
             scale={new Array(3).fill(10.16)}
             path={'/Font/smile_candy/Smile Candy.ttf'}
-            /> */}
+            />
 
       <Suspense>
         <Model
