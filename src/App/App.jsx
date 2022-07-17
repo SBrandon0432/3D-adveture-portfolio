@@ -51,7 +51,7 @@ function App() {
 
           {/* <Orbit/> */}
           <OrbitControls attach={'orbitControls'}/>
-          <axesHelper args={[5,5,5]}/>
+          {/* <axesHelper args={[5,5,5]}/> */}
 
           <Physics>
               <JapaneseHouse
@@ -70,13 +70,13 @@ function App() {
           <Suspense>
            <Background/>
           </Suspense>
-{/*
+
         <Physics>
           <NatureStop
             position={[-40,5,-16]}
             rotation={[0,3.25,0]}
           />
-        </Physics> */}
+        </Physics>
 
       </Canvas>
     </div>

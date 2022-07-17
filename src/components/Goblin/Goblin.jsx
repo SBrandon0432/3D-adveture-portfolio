@@ -34,9 +34,7 @@ const Goblin = (props) => {
             />
             :
             <BoundingBox
-            visible
             dims={[5,5,5]}
-            color={'red'}
             >
 
             <Model
