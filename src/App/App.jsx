@@ -42,6 +42,16 @@ function App() {
 
       </div>
       <Canvas
+        frameloop="demand"
+        performance = {
+         {
+          current: 1,
+          min: 0.1,
+          max: 1,
+          debounce: 200,
+          regress: () => {return null}
+          }
+        }
         shadows
         className='canvas'
         gl = {{
