@@ -35,7 +35,7 @@ function App() {
           textAlign: 'center',
           color: 'red'
         }}>
-          MAY TAKE UP TO 1-2 MIN TO LOAD, PLEASE WAIT! CLICK RIDER TO START ADVENTURE
+          MAY TAKE UP TO 1 MIN TO LOAD, PLEASE WAIT! CLICK RIDER TO START ADVENTURE
         </h1>
       </div>
       <div>
@@ -55,7 +55,7 @@ function App() {
         shadows
         className='canvas'
         gl = {{
-          // powerPreference: "high-performance",
+          powerPreference: "high-performance",
         }}
       >
 
