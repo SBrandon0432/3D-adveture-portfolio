@@ -12,6 +12,13 @@ const SpaceGlobe = (props) => {
   const ref = useRef();
 
 
+    useFrame(()=>{
+      if (props.animation) {
+          ref.current.rotation.y +=0.01
+       }
+    })
+
+
   return (
     <group
       className = 'SpaceGlobe'

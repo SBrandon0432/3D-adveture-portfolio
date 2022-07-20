@@ -27,6 +27,7 @@ const NatureStop = (props) => {
         path = {'/Models/space_globe/scene.gltf'}
         scale = {new Array(3).fill(.4)}
         position = {[6 ,-3.5, -9.5]}
+        animation = {true}
       />
 
       <Suspense>
