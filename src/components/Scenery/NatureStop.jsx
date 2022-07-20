@@ -3,6 +3,8 @@ import { useThree, useFrame } from "react-three-fiber";
 import BulbPointLight from "../Lights/BulbPointLight";
 import SpaceGlobe from "./SpaceGlobe";
 import Text from './Text'
+import font from 'three/examples/fonts/gentilis_regular.typeface.json'
+
 const Model = lazy(()=> import('../Utility/Model'));
 
 
@@ -26,20 +28,22 @@ const NatureStop = (props) => {
 
       <group className='nature_stop__globe'>
         <Text
-           position={[4.2 ,-1.5, -5.2]}
-           rotation={[0,2.23,0]}
+           position={[4.5 ,-1.5, -6.2]}
+           rotation={[0,3.23,0]}
            scale={new Array(3).fill(0.6)}
-           path={'/Font/smile_candy/Smile Candy_Regular.json'}
+           path={font}
            color={'#00a2ff'}
            emissiveColor={'#ffc800'}
            text = {"Nature Tours!"}
-           animation={true}
+           curveSegments={12}
+           url={'https://master.d399jz8oeudk7y.amplifyapp.com/'}
         />
 
         <SpaceGlobe
           path = {'/Models/space_globe/scene.gltf'}
           scale = {new Array(3).fill(.4)}
           position = {[6 ,-3.5, -9.5]}
+          rotation = {[-0.6,0,0.4]}
           animation = {true}
           />
       </group>

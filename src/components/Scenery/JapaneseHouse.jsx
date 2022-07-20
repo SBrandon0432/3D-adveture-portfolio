@@ -40,6 +40,7 @@ const JapaneseHouse = (props) => {
             color={'#00a2ff'}
             emissiveColor={'#ffc800'}
             text={'GitHub!'}
+            url= {"https://github.com/SBrandon0432"}
             />
 
       <Suspense>

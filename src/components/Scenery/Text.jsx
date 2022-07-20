@@ -14,13 +14,8 @@ const Sign = (props) => {
     camera
   } = useThree();
   const ref = useRef();
-  const textRef = useRef();
 
-  useFrame((state)=> {
-    if(props.animation) {
-      textRef.current.rotation.y -= 0.01
-    }
-  })
+
 
   return (
     <group
@@ -30,15 +25,15 @@ const Sign = (props) => {
       className='text_button'
       onClick = {(e)=> {
         console.log(e)
-        window.location = "https://github.com/SBrandon0432"
+        window.location = props?.url
       }}
       >
-        <mesh >
+        <mesh
+          >
           <Text3D
             rotation={props?.rotation}
             font={props?.path}
             {...props}
-            ref={textRef}
             >
             {props.text}
             <meshLambertMaterial
