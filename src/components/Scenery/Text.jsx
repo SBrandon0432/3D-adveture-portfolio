@@ -14,8 +14,13 @@ const Sign = (props) => {
     camera
   } = useThree();
   const ref = useRef();
+  const textRef = useRef();
 
-
+  useFrame((state)=> {
+    if(props.animation) {
+      textRef.current.rotation.y -= 0.01
+    }
+  })
 
   return (
     <group
@@ -29,29 +34,17 @@ const Sign = (props) => {
       }}
       >
         <mesh >
-        {/* <Html
-          as='div'
-        >
-          <a
-            herf="https://github.com/SBrandon0432"
-            rel='noopener noreferrer'
-          > </a>
-
-        </Html> */}
           <Text3D
             rotation={props?.rotation}
             font={props?.path}
             {...props}
+            ref={textRef}
             >
-
-            GitHub!
+            {props.text}
             <meshLambertMaterial
               emissive={props?.emissiveColor}
               color = {props?.color}
-              depthTest={true}
-              depthWrite={true}
             />
-
 
           </Text3D>
         </mesh>

@@ -12,7 +12,7 @@ const SpaceGlobe = (props) => {
   const ref = useRef();
 
 
-    useFrame(()=>{
+    useFrame((state)=>{
       if (props.animation) {
           ref.current.rotation.y +=0.01
        }

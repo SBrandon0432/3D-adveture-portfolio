@@ -39,6 +39,7 @@ const JapaneseHouse = (props) => {
             path={'/Font/smile_candy/Smile Candy_Regular.json'}
             color={'#00a2ff'}
             emissiveColor={'#ffc800'}
+            text={'GitHub!'}
             />
 
       <Suspense>
