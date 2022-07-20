@@ -24,7 +24,7 @@ const NatureStop = (props) => {
       <Suspense>
         <Model
           path={'/Models/small_house_diorama/scene.gltf'}
-          scale = {new Array(3).fill(1)}
+          scale = {new Array(3).fill(1.1)}
         />
       </Suspense>
 

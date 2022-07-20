@@ -83,7 +83,7 @@ function App() {
 
         <Physics>
           <NatureStop
-            position={[-40,5,-16]}
+            position={[-40,6,-16]}
             rotation={[0,3.25,0]}
           />
         </Physics>
