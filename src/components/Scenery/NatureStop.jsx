@@ -4,6 +4,7 @@ import BulbPointLight from "../Lights/BulbPointLight";
 import SpaceGlobe from "./SpaceGlobe";
 import Text from './Text'
 import font from 'three/examples/fonts/gentilis_regular.typeface.json'
+import NatureStopLights from "./SceneryLights/NatureStopLights";
 
 const Model = lazy(()=> import('../Utility/Model'));
 
@@ -25,7 +26,7 @@ const NatureStop = (props) => {
       {...props}
       ref={ref}
     >
-
+      <NatureStopLights/>
       <group className='nature_stop__globe'>
         <Text
            position={[4.5 ,-1.5, -6.2]}

@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import GoblinMovingLights from "./GoblinMovingLights";
 import BoundingBox from "../Utility/BoundingBox";
 import CameraState from "../../State/CameraState";
+import { preProcessFile } from "typescript";
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -21,6 +22,9 @@ const MoveGoblin = (props) => {
       camera.position.lerp(CameraState.cameraPos1, 0.007)
       scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
       scene.orbitControls.update();
+    } else {
+      // props.setPos([ref.current.position])
+      // props.handler(null)
     }
   })
 
@@ -28,6 +32,7 @@ const MoveGoblin = (props) => {
     <group
       {...props}
       ref={ref}
+
     >
 
       <GoblinMovingLights/>

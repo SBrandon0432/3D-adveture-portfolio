@@ -13,6 +13,7 @@ const Goblin = (props) => {
   const ref = useRef();
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(null);
+  const [position, setPosition] = useState([0,0,0])
   useFrame(()=> {
     if(!isMove) {
       camera.position.lerp(CameraState.cameraPos, .001)
@@ -25,18 +26,21 @@ const Goblin = (props) => {
       {...props}
       ref={ref}
       onClick={()=> setIsMove(true)}
-    >
+      >
       <GoblinStillLights />
       <Suspense>
         {
           isMove ?
-            <MoveGoblin
-            />
-            :
-            <BoundingBox
-            dims={[2,1.6,2]}
-            visible
-            >
+          <MoveGoblin
+          handler={setIsMove}
+          setPos = {setPosition}
+          />
+          :
+          <BoundingBox
+          dims={[2,1.6,2]}
+          visible
+          position = {position}
+          >
 
             <Model
               path={'/Models/desert_racer/scene.gltf'}

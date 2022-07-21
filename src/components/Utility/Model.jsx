@@ -25,9 +25,6 @@ const Model = props =>{
     useFrame((scene, delta)=> {
       mixer?.update(delta)
 
-      // console.log(scene.camera.position)
-
-
     }); // renders animations
 
   model.scene.traverse(child => {
