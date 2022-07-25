@@ -1,5 +1,5 @@
 //-------Libraries / tools
-import React,{Suspense, useState} from 'react';
+import React,{Suspense, useState, useEffect} from 'react';
 import * as THREE from 'three'
 import {Canvas, useThree} from 'react-three-fiber';
 import { Physics } from "@react-three/cannon";
@@ -19,14 +19,14 @@ import BoundingBox from '../components/Utility/BoundingBox';
 
 //-------Development only
 import Orbit from '../components/Utility/Orbit';  // use drei for deployment
-
-
+import { Console } from 'console';
 
 
 
 
 
 function App() {
+
 
   return (
     <div className='App'>
