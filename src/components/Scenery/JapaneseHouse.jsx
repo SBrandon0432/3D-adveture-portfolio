@@ -2,8 +2,9 @@ import React,{lazy, Suspense} from "react";
 import * as THREE from 'three';
 import Sun from "./Sun";
 import BulbPointLight from "../Lights/BulbPointLight";
-import Sign from "./Sign";
+// import Sign from "./Sign";
 import Text from '../Scenery/Text'
+const Sign = lazy(()=> import('./Sign'))
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -26,12 +27,13 @@ const JapaneseHouse = (props) => {
           position={[-50,7,20]}
           scale={new Array(3).fill(1.2)}
           />
+        <Suspense fallback={null}>
+          <Sign
+            position={[-14.6,-13,-27.21]}
+            scale={new Array(3).fill(1.16)}
 
-        <Sign
-          position={[-14.6,-13,-27.21]}
-          scale={new Array(3).fill(1.16)}
-
-        />
+            />
+        </Suspense>
           <Text
             position={[-10,-9.32,-19.4]}
             rotation={[0,2.23,0]}
