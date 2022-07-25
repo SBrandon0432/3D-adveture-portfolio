@@ -19,7 +19,6 @@ import BoundingBox from '../components/Utility/BoundingBox';
 
 //-------Development only
 import Orbit from '../components/Utility/Orbit';  // use drei for deployment
-import { Console } from 'console';
 
 
 
