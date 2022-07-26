@@ -11,7 +11,6 @@ const Model = lazy(() => import("../Utility/Model"));
 const JapaneseHouse = (props) => {
 
 
-
   return (
     <group
       className='japanese_house'
