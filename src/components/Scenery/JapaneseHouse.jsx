@@ -48,7 +48,7 @@ const JapaneseHouse = (props) => {
         <Model
           path={'/Models/mobile_home/scene.gltf'}
           scale={new Array(3).fill(.9)}
-          animate={true}
+          animate={null}
           />
       </Suspense>
 

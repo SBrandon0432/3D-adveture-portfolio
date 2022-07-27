@@ -14,19 +14,23 @@ const MoveGoblin = (props) => {
   const ref = useRef();
   const { camera, scene } = useThree();
   const [moveSpeed, setMoveSpeed] = useState(0.16)
+  const [stop, setStop] = useState(-40)
 
   useFrame((state)=> {
 
-    if (ref.current.position.z > -40) {
+    if (ref.current.position.z >= stop) {
       ref.current.position.z -= moveSpeed
       camera.position.lerp(CameraState.cameraPos1, 0.007)
       scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
       scene.orbitControls.update();
-    } else {
-      // props.setPos([ref.current.position])
-      // props.handler(null)
     }
   })
+
+  if (ref.current?.position.z <= -40) {
+    // props.setPos([ref.current.position])
+    // props.handler(null)
+    console.log('here')
+  }
 
   return (
     <group
