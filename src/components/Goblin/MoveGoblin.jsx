@@ -1,11 +1,8 @@
 import React, {lazy, Suspense, useRef, useState} from "react";
 import { useFrame, useThree,  } from "react-three-fiber";
-import { PerspectiveCamera } from '@react-three/drei'
-import * as THREE from 'three'
 import GoblinMovingLights from "./GoblinMovingLights";
 import BoundingBox from "../Utility/BoundingBox";
 import CameraState from "../../State/CameraState";
-import { preProcessFile } from "typescript";
 const Model = lazy(() => import("../Utility/Model"));
 
 
@@ -23,14 +20,13 @@ const MoveGoblin = (props) => {
       camera.position.lerp(CameraState.cameraPos1, 0.007)
       scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
       scene.orbitControls.update();
+      console.log(ref.current.position.z)
     }
+
   })
 
-  if (ref.current?.position.z <= -40) {
-    // props.setPos([ref.current.position])
-    // props.handler(null)
-    console.log('here')
-  }
+
+
 
   return (
     <group

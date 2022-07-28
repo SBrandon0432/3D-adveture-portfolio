@@ -1,9 +1,5 @@
-import React, {lazy, Suspense, useRef, useState} from "react";
-import { useFrame, useThree } from "react-three-fiber";
-import * as THREE from 'three'
+import React from "react";
 import BulbPointLight from "../Lights/BulbPointLight";
-import BoundingBox from "../Utility/BoundingBox";
-import Dragables from "../Utility/DragControls";
 
 const GoblinStillLights = (props) => {
 
