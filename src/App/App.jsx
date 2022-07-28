@@ -55,6 +55,9 @@ function App() {
         className='canvas'
         gl = {{
           powerPreference: "high-performance",
+          // antialias: false,
+          // stencil: false,
+          // depth: false
         }}
       >
 

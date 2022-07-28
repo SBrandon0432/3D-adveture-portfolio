@@ -16,7 +16,8 @@ const MoveGoblin = (props) => {
   useFrame((state)=> {
 
     if (ref.current.position.z >= stop) {
-      ref.current.position.z -= moveSpeed
+      // ref.current.position.z -= moveSpeed
+      ref.current.position.z.lerp([0,0,-40], moveSpeed)
       camera.position.lerp(CameraState.cameraPos1, 0.007)
       scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
       scene.orbitControls.update();
@@ -24,8 +25,6 @@ const MoveGoblin = (props) => {
     }
 
   })
-
-
 
 
   return (
