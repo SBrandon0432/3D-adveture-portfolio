@@ -1,9 +1,9 @@
 //-------Libraries / tools
-import React,{Suspense, useState, useEffect} from 'react';
+import React,{Suspense} from 'react';
 import * as THREE from 'three'
 import {Canvas, useThree} from 'react-three-fiber';
 import { Physics } from "@react-three/cannon";
-import { OrbitControls, View } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 
 //----------goblin Model
 import Goblin from '../components/Goblin/Goblin';
