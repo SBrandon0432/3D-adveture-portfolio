@@ -34,7 +34,7 @@ const NatureStop = (props) => {
         <BoundingBox
           dims={[4,4,4]}
           visible
-          position={[8.5 ,0, -7.2]}
+          position={[9.5 ,-2, -7.2]}
           >
           <Text
             position={[0.8 ,1, 0]}
