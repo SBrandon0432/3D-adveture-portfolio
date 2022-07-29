@@ -34,10 +34,10 @@ const NatureStop = (props) => {
         <BoundingBox
           dims={[4,4,4]}
           visible
-          position={[4.5 ,-1.5, -6.2]}
+          position={[8.5 ,0, -7.2]}
           >
           <Text
-            // position={[4.5 ,-1.5, -6.2]}
+            position={[0.8 ,1, 0]}
             rotation={[0,3.23,0]}
             scale={new Array(3).fill(0.6)}
             path={font}
