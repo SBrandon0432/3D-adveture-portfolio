@@ -35,6 +35,9 @@ const NatureStop = (props) => {
           dims={[4,4,4]}
           visible
           position={[9.5 ,-2, -7.2]}
+          onClick = {()=> {
+            window.location = 'https://master.d399jz8oeudk7y.amplifyapp.com/'
+          }}
           >
           <Text
             position={[0.8 ,1, 0]}
