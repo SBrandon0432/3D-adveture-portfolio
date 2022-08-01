@@ -1,6 +1,6 @@
 import React from "react";
 import * as THREE from 'three'
-import { } from "react-three-fiber";
+import { } from "@react-three/fiber";
 
 
 const Sphere = (props) => {

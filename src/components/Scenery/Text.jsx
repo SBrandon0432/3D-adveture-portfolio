@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useRef } from "react";
-import { useFrame, useThree, extend} from "react-three-fiber";
+import { useFrame, useThree, extend} from "@react-three/fiber";
 // import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import {FontLoader} from 'three/examples/jsm/loaders/FontLoader'
 import { Text3D, Html } from "@react-three/drei";

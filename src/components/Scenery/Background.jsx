@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoader } from 'react-three-fiber';
+import { useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 import nebula from '../../Assets/nebula.jpeg';
 

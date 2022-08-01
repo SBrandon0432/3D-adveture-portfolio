@@ -1,5 +1,5 @@
 import React, {lazy, Suspense, useRef, useState} from "react";
-import { useFrame, useThree } from "react-three-fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from 'three'
 import MoveGoblin from "./MoveGoblin";
 import GoblinStillLights from "./GoblinStillLights";
@@ -14,11 +14,11 @@ const Goblin = (props) => {
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(null);
   const [position, setPosition] = useState([0,0,0])
-  useFrame(()=> {
-    if(!isMove) {
-      camera.position.lerp(CameraState.cameraPos, .001)
-    }
-  })
+  // useFrame(()=> {
+  //   if(!isMove) {
+  //     camera.position.lerp(CameraState.cameraPos, .001)
+  //   }
+  // })
 
 
   return (
@@ -28,7 +28,7 @@ const Goblin = (props) => {
       onClick={()=> setIsMove(true)}
       >
       <GoblinStillLights />
-      <Suspense>
+
         {
           isMove ?
           <MoveGoblin
@@ -48,7 +48,7 @@ const Goblin = (props) => {
               />
             </BoundingBox>
         }
-      </Suspense>
+
       <EffectsGoblin/>
     </group >
   )

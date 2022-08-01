@@ -1,7 +1,7 @@
 //-------Libraries / tools
 import React,{Suspense} from 'react';
 import * as THREE from 'three'
-import {Canvas, useThree} from 'react-three-fiber';
+import {Canvas, useThree} from '@react-three/fiber';
 import { Physics } from "@react-three/cannon";
 import { OrbitControls } from '@react-three/drei';
 
@@ -55,9 +55,6 @@ function App() {
         className='canvas'
         gl = {{
           powerPreference: "high-performance",
-          // antialias: false,
-          // stencil: false,
-          // depth: false
         }}
       >
 

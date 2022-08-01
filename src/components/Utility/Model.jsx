@@ -41,7 +41,7 @@ const Model = props =>{
 
       child.castShadow = true;
       child.receiveShadow = true;
-      child.material.side = THREE.DoubleSide;
+      // child.material.side = THREE.DoubleSide;
 
     }
   }) // loads shadows

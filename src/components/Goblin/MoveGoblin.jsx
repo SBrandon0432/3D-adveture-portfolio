@@ -1,6 +1,6 @@
 import React, {lazy, Suspense, useRef, useState} from "react";
 import * as THREE from 'three'
-import { useFrame, useThree,  } from "react-three-fiber";
+import { useFrame, useThree,  } from "@react-three/fiber";
 import GoblinMovingLights from "./GoblinMovingLights";
 import BoundingBox from "../Utility/BoundingBox";
 import CameraState from "../../State/CameraState";

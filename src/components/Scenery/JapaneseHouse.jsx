@@ -2,9 +2,9 @@ import React,{lazy, Suspense} from "react";
 import * as THREE from 'three';
 import Sun from "./Sun";
 import BulbPointLight from "../Lights/BulbPointLight";
-// import Sign from "./Sign";
+import Sign from "./Sign";
 import Text from '../Scenery/Text'
-const Sign = lazy(()=> import('./Sign'))
+// const Sign = lazy(()=> import('./Sign'))
 const Model = lazy(() => import("../Utility/Model"));
 
 

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useRef } from "react";
-import { useFrame, useThree } from "react-three-fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 const Model = lazy(()=> import('../Utility/Model'))
 
 

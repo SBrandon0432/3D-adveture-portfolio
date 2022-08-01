@@ -1,5 +1,5 @@
 import React, {lazy, Suspense, useState, useEffect, useRef} from "react";
-import { useThree, useFrame } from "react-three-fiber";
+import { useThree, useFrame } from "@react-three/fiber";
 import BulbPointLight from "../Lights/BulbPointLight";
 import SpaceGlobe from "./SpaceGlobe";
 import Text from './Text'
@@ -17,7 +17,6 @@ const NatureStop = (props) => {
   useFrame((state)=> {
     // console.log(ref)
   })
-
 
   return (
     <group
