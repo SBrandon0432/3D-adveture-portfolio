@@ -49,7 +49,7 @@ const Goblin = (props) => {
             </BoundingBox>
         }
 
-      <EffectsGoblin/>
+      {/* <EffectsGoblin/> */}
     </group >
   )
 }
