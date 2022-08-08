@@ -58,7 +58,11 @@ const NatureStop = (props) => {
             </group>
         </BoundingBox>
 
-
+        <PurpleSun
+          scale = {new Array(3).fill(2)}
+          position={[6,15,9]}
+          rotation = {[-1,0,0]}
+        />
       <Suspense>
         <Model
           path={'/Models/small_house_diorama/scene.gltf'}

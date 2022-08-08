@@ -28,7 +28,7 @@ const Sun = (props) => {
           <Model
             path = {'/Models/purple_planet/scene.gltf'}
             scale = {props?.scale}
-            animation={true}
+            animate={true}
             />
         </Suspense>
     </group>

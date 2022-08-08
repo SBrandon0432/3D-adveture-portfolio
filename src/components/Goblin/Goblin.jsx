@@ -38,7 +38,6 @@ const Goblin = (props) => {
           :
           <BoundingBox
           dims={[2,1.6,2]}
-          visible
           position = {position}
           >
 
