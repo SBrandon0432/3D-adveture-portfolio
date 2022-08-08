@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cohete en el domo
+* source:	https://sketchfab.com/3d-models/cohete-en-el-domo-8673751f696441d4b2149d049bc24bb9
+* author:	geovaniduran1 (https://sketchfab.com/geovaniduran1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cohete en el domo" (https://sketchfab.com/3d-models/cohete-en-el-domo-8673751f696441d4b2149d049bc24bb9) by geovaniduran1 (https://sketchfab.com/geovaniduran1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

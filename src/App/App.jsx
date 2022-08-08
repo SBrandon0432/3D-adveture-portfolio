@@ -9,9 +9,9 @@ import { OrbitControls } from '@react-three/drei';
 import Goblin from '../components/Goblin/Goblin';
 
 //----------Scenery
-import JapaneseHouse from '../components/Scenery/JapaneseHouse';
+import JapaneseHouse from '../components/AdventureStops/JapaneseHouse';
 import Background from '../components/Scenery/Background';
-import NatureStop from '../components/Scenery/NatureStop';
+import NatureStop from '../components/AdventureStops/NatureStop';
 
 //----------Utility
 import BulbPointLight from '../components/Lights/BulbPointLight';

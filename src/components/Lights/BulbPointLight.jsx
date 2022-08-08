@@ -1,8 +1,6 @@
 import React, { lazy, useMemo } from "react";
-// const sphere = lazy(() => import('../Shapes/Sphere'));
 
 const BulbPointLight = (props) => {
-
 
   return (
 
