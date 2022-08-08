@@ -34,28 +34,32 @@ const NatureStop = (props) => {
           dims={[4,4,4]}
           visible
           position={[9.5 ,-2, -7.2]}
-          onClick = {()=> {
-            window.location = 'https://master.d399jz8oeudk7y.amplifyapp.com/'
-          }}
           >
-          <Text
-            position={[0.8 ,1, 0]}
-            rotation={[0,3.23,0]}
-            scale={new Array(3).fill(0.6)}
-            path={font}
-            color={'#00a2ff'}
-            emissiveColor={'#ffc800'}
-            text = {"Nature Tours!"}
-            curveSegments={12}
-            />
+          <group
+            onClick={(e)=> {
+              window.location = 'https://master.d399jz8oeudk7y.amplifyapp.com/'
+            }}
+          >
 
-          <SpaceGlobe
-            path = {'/Models/space_globe/scene.gltf'}
-            scale = {new Array(3).fill(.4)}
-            // position = {[6 ,-3.5, -9.5]}
-            rotation = {[-0.6,0,0.4]}
-            animation = {true}
-            />
+            <Text
+              position={[0.8 ,1, 0]}
+              rotation={[0,3.23,0]}
+              scale={new Array(3).fill(0.6)}
+              path={font}
+              color={'#00a2ff'}
+              emissiveColor={'#ffc800'}
+              text = {"Nature Tours!"}
+              curveSegments={12}
+              />
+
+            <SpaceGlobe
+              path = {'/Models/space_globe/scene.gltf'}
+              scale = {new Array(3).fill(.4)}
+              // position = {[6 ,-3.5, -9.5]}
+              rotation = {[-0.6,0,0.4]}
+              animation = {true}
+              />
+            </group>
         </BoundingBox>
             </Suspense>
       </group>
