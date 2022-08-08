@@ -14,18 +14,18 @@ const Goblin = (props) => {
   const {camera } = useThree();
   const [isMove, setIsMove] = useState(null);
   const [position, setPosition] = useState([0,0,0])
-  // useFrame(()=> {
-  //   if(!isMove) {
-  //     camera.position.lerp(CameraState.cameraPos, .001)
-  //   }
-  // })
+  useFrame(()=> {
+    if(!isMove) {
+      camera.position.lerp(CameraState.cameraPos, .001)
+    }
+  })
 
 
   return (
     <group
       {...props}
       ref={ref}
-      onClick={()=> setIsMove(null)}
+      onClick={()=> setIsMove(true)}
       >
       <GoblinStillLights />
 
@@ -49,7 +49,7 @@ const Goblin = (props) => {
             </BoundingBox>
         }
 
-      {/* <EffectsGoblin/> */}
+      <EffectsGoblin/>
     </group >
   )
 }

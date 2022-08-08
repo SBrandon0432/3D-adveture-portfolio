@@ -58,8 +58,8 @@ function App() {
         }}
       >
 
-          {/* <Orbit/> */}
-          {/* <OrbitControls attach={'orbitControls'}/> */}
+          <Orbit/>
+          <OrbitControls attach={'orbitControls'}/>
           {/* <axesHelper args={[5,5,5]}/> */}
 
           <Physics>
@@ -80,12 +80,12 @@ function App() {
            <Background/>
           </Suspense>
 
-        {/* <Physics>
+        <Physics>
           <NatureStop
             position={[-40,6,-16]}
             rotation={[0,3.25,0]}
           />
-        </Physics> */}
+        </Physics>
 
       </Canvas>
     </div>

@@ -16,16 +16,16 @@ const MoveGoblin = (props) => {
   const [stop, setStop] = useState(-40)
   const vec = new Vector3(0,0,-40)
 
-  // useFrame((state)=> {
+  useFrame((state)=> {
 
-  //   if (ref.current.position.z >= stop) {
-  //     ref.current.position.lerp(vec, 0.007)
-  //     camera.position.lerp(CameraState.cameraPos1, 0.007)
-  //     scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
-  //     scene.orbitControls.update();
-  //   }
+    if (ref.current.position.z >= stop) {
+      ref.current.position.lerp(vec, 0.007)
+      camera.position.lerp(CameraState.cameraPos1, 0.007)
+      scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
+      scene.orbitControls.update();
+    }
 
-  // })
+  })
 
 
   return (
