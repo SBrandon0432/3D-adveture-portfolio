@@ -12,11 +12,10 @@ const Model = lazy(() => import("../Utility/Model"));
 const MoveGoblin = (props) => {
   const ref = useRef();
   const { camera, scene } = useThree();
-  const [moveSpeed, setMoveSpeed] = useState(0.16)
   let [stop, setStop] = useState(-40)
-  const vec = new Vector3(0,0,-40)
+  const vec1 = new Vector3(0,0,-40)
   const vec2 = new Vector3(0,0,-90)
-  const [currentVec, setCurrentVec] = useState(vec)
+  const [currentVec, setCurrentVec] = useState(vec1)
   let cameraTar = CameraState.target1;
   let cameraPos = CameraState.cameraPos1;
 
