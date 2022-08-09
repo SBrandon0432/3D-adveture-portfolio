@@ -32,7 +32,7 @@ const Goblin = (props) => {
         {
           isMove ?
           <MoveGoblin
-          handler={setIsMove}
+          handler = {setIsMove}
           setPos = {setPosition}
           />
           :
@@ -44,6 +44,7 @@ const Goblin = (props) => {
             <Model
               path={'/Models/desert_racer/scene.gltf'}
               scale={new Array(3).fill(.028)}
+              animate={false}
               />
             </BoundingBox>
         }

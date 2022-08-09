@@ -13,13 +13,15 @@ const MoveGoblin = (props) => {
   const ref = useRef();
   const { camera, scene } = useThree();
   const [moveSpeed, setMoveSpeed] = useState(0.16)
-  const [stop, setStop] = useState(-40)
+  let [stop, setStop] = useState(-40)
   const vec = new Vector3(0,0,-40)
+  const vec2 = new Vector3(0,0,-90)
+  const [currentVec, setCurrentVec] = useState(vec)
 
   useFrame((state)=> {
 
     if (ref.current.position.z >= stop) {
-      ref.current.position.lerp(vec, 0.007)
+      ref.current.position.lerp(currentVec, 0.007)
       camera.position.lerp(CameraState.cameraPos1, 0.007)
       scene.orbitControls.target.lerp(CameraState.target1 , 0.009)
       scene.orbitControls.update();
@@ -27,28 +29,28 @@ const MoveGoblin = (props) => {
 
   })
 
-
   return (
     <group
       {...props}
       ref={ref}
-
+      onClick={()=> {
+        setStop(stop -= 50)
+        setCurrentVec(vec2)
+      }}
     >
-
       <GoblinMovingLights/>
       <BoundingBox
         dims={[2,1.6,2]}
-      >
-
-      <Suspense>
-        <Model
-          path={'/Models/desert_racer/scene.gltf'}
-          scale={new Array(3).fill(.028)}
-          animate={true}
-          />
-      </Suspense>
-          </BoundingBox >
-    </group>
+        >
+          <Suspense>
+            <Model
+              path={'/Models/desert_racer/scene.gltf'}
+              scale={new Array(3).fill(.028)}
+              animate={true}
+              />
+          </Suspense>
+        </BoundingBox >
+  </group>
   )
 }
 
