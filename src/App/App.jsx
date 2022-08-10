@@ -12,6 +12,7 @@ import Goblin from '../components/Goblin/Goblin';
 import JapaneseHouse from '../components/AdventureStops/JapaneseHouse';
 import Background from '../components/Scenery/Background';
 import NatureStop from '../components/AdventureStops/NatureStop';
+import CarStop from '../components/AdventureStops/CarStop';
 
 //----------Utility
 import BulbPointLight from '../components/Lights/BulbPointLight';
@@ -84,6 +85,13 @@ function App() {
           <NatureStop
             position={[-40,6,-16]}
             rotation={[0,3.25,0]}
+          />
+        </Physics>
+
+        <Physics>
+          <CarStop
+            position={[-90,-1,-19]}
+            rotation={[.1,2.25,0]}
           />
         </Physics>
 

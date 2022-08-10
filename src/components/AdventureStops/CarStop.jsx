@@ -5,11 +5,24 @@ import font from 'three/examples/fonts/gentilis_regular.typeface.json'
 const Model = lazy( () => import('../Utility/Model'));
 
 const CarStop = (props) => {
-
+  const ref = useRef();
 
 
   return (
-    null
+    <group
+      position={props?.position}
+      rotation={props?.rotation}
+      {...props}
+      ref={ref}
+    >
+
+      <Suspense>
+        <Model
+          path = {'/Models/futuristic_car_2/scene.gltf'}
+          scale = {new Array(3).fill(.005)}
+        />
+      </Suspense>
+    </group>
   )
 }
 
