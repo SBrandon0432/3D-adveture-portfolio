@@ -5,8 +5,8 @@ const CameraState = {
   cameraPos1: new THREE.Vector3(-49.6,-1.23,3.54),
   target1: new THREE.Vector3(-43,6.5,-5.94),
 
-  cameraPos2: new THREE.Vector3(-89.6,-1.23,3.54),
-  target2: new THREE.Vector3(-83,6.5,-5.94),
+  cameraPos2: new THREE.Vector3(-90,-1.23,3.54),
+  target2: new THREE.Vector3(-91,2,-7),
 }
 
 export default CameraState;
