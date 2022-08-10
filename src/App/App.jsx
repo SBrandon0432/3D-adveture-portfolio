@@ -61,40 +61,39 @@ function App() {
 
           <Orbit/>
           <OrbitControls attach={'orbitControls'}/>
-          {/* <axesHelper args={[5,5,5]}/> */}
 
-          <Physics>
-              <JapaneseHouse
-                position={[-10,14,-26]}
-                rotation={[0,Math.PI,0]}
-                />
-            </Physics>
+        <Physics>
+          <Goblin
+              position={[0,0,0]}
+              rotation={[0, 190, 0]}
+              />
+        </Physics>
 
-            <Physics>
-              <Goblin
-                  position={[0,0,0]}
-                  rotation={[0, 190, 0]}
-                  />
-           </Physics>
-
-          <Suspense>
-           <Background/>
-          </Suspense>
+        <Physics>
+          <JapaneseHouse
+            position={[-10,14,-26]}
+            rotation={[0,Math.PI,0]}
+            />
+        </Physics>
 
         <Physics>
           <NatureStop
             position={[-40,6,-16]}
             rotation={[0,3.25,0]}
-          />
+            />
         </Physics>
 
         <Physics>
           <CarStop
             position={[-90,-1,-19]}
             rotation={[.1,2.25,0]}
-          />
+            />
         </Physics>
 
+
+          <Suspense>
+            <Background/>
+          </Suspense>
       </Canvas>
     </div>
   );
