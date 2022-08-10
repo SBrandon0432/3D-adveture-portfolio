@@ -16,15 +16,16 @@ const MoveGoblin = (props) => {
   const vec1 = new Vector3(0,0,-40)
   const vec2 = new Vector3(0,0,-90)
   const [currentVec, setCurrentVec] = useState(vec1)
-  let cameraTar = CameraState.target1;
-  let cameraPos = CameraState.cameraPos1;
+  const [cameraTar, setCameraTar] = useState(CameraState.target1)
+  const [cameraPos, setCameraPos] = useState(CameraState.cameraPos1)
+
 
   useFrame((state)=> {
 
     if (ref.current.position.z >= stop) {
       ref.current.position.lerp(currentVec, 0.007)
-      camera.position.lerp(cameraPos, 0.007)
-      scene.orbitControls.target.lerp(cameraTar , 0.009)
+      // camera.position.lerp(cameraPos, 0.007)
+      // scene.orbitControls.target.lerp(cameraTar , 0.009)
       scene.orbitControls.update();
     }
 
@@ -37,6 +38,8 @@ const MoveGoblin = (props) => {
       onClick={()=> {
         setStop(stop -= 40)
         setCurrentVec(vec2)
+        setCameraTar(CameraState.target2);
+        setCameraPos(CameraState.cameraPos2);
       }}
     >
       <GoblinMovingLights/>
