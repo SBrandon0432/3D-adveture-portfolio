@@ -10,10 +10,9 @@ const Model = lazy( () => import('../Utility/Model'));
 const CarStop = (props) => {
   const ref = useRef();
   const mainCarGroupRef = useRef();
-  const mainCarRef = useRef()
 
   useFrame(()=> {
-    // mainCarRef.current.rotation.y += 0.01
+    mainCarGroupRef.current.rotation.y += 0.004
 
   })
 
@@ -27,7 +26,6 @@ const CarStop = (props) => {
       <group
         ref={mainCarGroupRef}
       >
-        <axesHelper args={[10,10,10]}/>
         <Plane/>
         <SpaceCar
           scale = {new Array(3).fill(.07)}
