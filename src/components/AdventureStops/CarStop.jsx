@@ -31,7 +31,8 @@ const CarStop = (props) => {
         <Plane/>
         <SpaceCar
           scale = {new Array(3).fill(.07)}
-          position = {[3,0,0]}
+          position = {[3.3,1,0]}
+          rotation = {[-0.1,-0.008, 0.09]}
         />
       </group>
     </group>
