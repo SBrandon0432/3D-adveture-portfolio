@@ -15,7 +15,7 @@ const CarStop = (props) => {
 
   useFrame(()=> {
     mainCarGroupRef.current.rotation.y += 0.004
-
+    classicCarRef.current.rotation.y -= 0.003
   })
 
   return (
@@ -40,11 +40,14 @@ const CarStop = (props) => {
 
       <group
         ref={classicCarRef}
-        position = {[5,10,5]}
+        position = {[20,10,-13]}
+        rotation = {[0,0,0.7]}
       >
-        <Plane />
+        <axesHelper args={[10,10,10]}/>
+        <Plane/>
         <ClassicCar
           scale = {new Array(3).fill(7)}
+          position ={[0,-0.2,0]}
         />
       </group>
 
