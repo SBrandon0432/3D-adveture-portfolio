@@ -30,7 +30,8 @@ const CarStop = (props) => {
         <axesHelper args={[10,10,10]}/>
         <Plane/>
         <SpaceCar
-          scale = {new Array(3).fill(.005)}
+          scale = {new Array(3).fill(.07)}
+          position = {[3,0,0]}
         />
       </group>
     </group>
