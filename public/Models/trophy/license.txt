@@ -1,0 +1,11 @@
+Model Information:
+* title:	Trophy
+* source:	https://sketchfab.com/3d-models/trophy-fe7d14c1e37149be87a331fbf7ebba2b
+* author:	audiode (https://sketchfab.com/audiode)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Trophy" (https://sketchfab.com/3d-models/trophy-fe7d14c1e37149be87a331fbf7ebba2b) by audiode (https://sketchfab.com/audiode) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
