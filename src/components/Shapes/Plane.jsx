@@ -20,7 +20,7 @@ const Plane = (props) => {
     ref={ref}
     >
       <cylinderBufferGeometry
-        args={[9,9,.5]}
+        args={[10,10,.5]}
       />
       <meshPhysicalMaterial
         map={texture}
