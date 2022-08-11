@@ -3,11 +3,19 @@ import { useThree, useFrame } from "@react-three/fiber";
 import Text from '../Scenery/Text'
 import font from 'three/examples/fonts/gentilis_regular.typeface.json'
 import Plane from "../Shapes/Plane";
+import BoundingBox from "../Utility/BoundingBox";
+import SpaceCar from "../Scenery/SpaceCar";
 const Model = lazy( () => import('../Utility/Model'));
 
 const CarStop = (props) => {
   const ref = useRef();
+  const mainCarGroupRef = useRef();
+  const mainCarRef = useRef()
 
+  useFrame(()=> {
+    // mainCarRef.current.rotation.y += 0.01
+
+  })
 
   return (
     <group
@@ -16,15 +24,15 @@ const CarStop = (props) => {
       {...props}
       ref={ref}
     >
-      <Plane
-
-      />
-      <Suspense>
-        <Model
-          path = {'/Models/futuristic_car_2/scene.gltf'}
+      <group
+        ref={mainCarGroupRef}
+      >
+        <axesHelper args={[10,10,10]}/>
+        <Plane/>
+        <SpaceCar
           scale = {new Array(3).fill(.005)}
         />
-      </Suspense>
+      </group>
     </group>
   )
 }
