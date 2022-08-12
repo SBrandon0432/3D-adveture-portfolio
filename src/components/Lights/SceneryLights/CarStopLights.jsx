@@ -12,7 +12,7 @@ const CarStopLights = (props) => {
           position={[0,15,-10]}
           color={'gold'}
           emissive={'gold'}
-          intensity={3}
+          intensity={1}
           radius={[0]}
           />
 
@@ -20,7 +20,7 @@ const CarStopLights = (props) => {
           position={[-10,15,-10]}
           color={'gold'}
           emissive={'gold'}
-          intensity={3}
+          intensity={1}
           radius={[0]}
           />
 

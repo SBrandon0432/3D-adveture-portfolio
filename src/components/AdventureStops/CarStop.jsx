@@ -8,6 +8,7 @@ import SpaceCar from "../Scenery/SpaceCar";
 import ClassicCar from "../Scenery/ClassicCar";
 import Trophy from "../Scenery/Trophy";
 import CarStopLights from "../Lights/SceneryLights/CarStopLights";
+import SpaceShip from "../Scenery/SpaceShip";
 const Model = lazy( () => import('../Utility/Model'));
 
 const CarStop = (props) => {
@@ -15,6 +16,7 @@ const CarStop = (props) => {
   const mainCarGroupRef = useRef();
   const classicCarRef = useRef();
   const trophyRef = useRef();
+  const spaceShipRef = useRef();
 
   useFrame(()=> {
     mainCarGroupRef.current.rotation.y += 0.004
@@ -54,6 +56,20 @@ const CarStop = (props) => {
         <Plane/>
         <ClassicCar
           scale = {new Array(3).fill(7)}
+          position ={[0,-0.2,0]}
+        />
+      </group>
+
+      <group
+        ref={spaceShipRef}
+        position = {[20,8,15]}
+        rotation = {[0,0,0.7]}
+        castShadow
+        receiveShadow
+      >
+        <Plane/>
+        <SpaceShip
+          scale = {new Array(3).fill(0.2)}
           position ={[0,-0.2,0]}
         />
       </group>
