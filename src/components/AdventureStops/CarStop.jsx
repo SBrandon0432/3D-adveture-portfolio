@@ -51,7 +51,6 @@ const CarStop = (props) => {
         castShadow
         receiveShadow
       >
-        <axesHelper args={[10,10,10]}/>
         <Plane/>
         <ClassicCar
           scale = {new Array(3).fill(7)}
@@ -67,7 +66,6 @@ const CarStop = (props) => {
         castShadow
         receiveShadow
         >
-          <axesHelper args={[10,10,10]}/>
         <Text
               position={[0.9 ,7.9, -1]}
               rotation={[0,3.84,0]}
