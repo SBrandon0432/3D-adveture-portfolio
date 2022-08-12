@@ -35,7 +35,7 @@ function App() {
           textAlign: 'center',
           color: 'red'
         }}>
-          MAY TAKE UP TO 1 MIN TO LOAD, PLEASE WAIT! CLICK RIDER TO START ADVENTURE
+          MAY TAKE UP TO 1 MIN TO LOAD, PLEASE WAIT! CLICK RIDER TO START ADVENTURE AND CHANGE STOPS
         </h1>
       </div>
       <div>
