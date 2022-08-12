@@ -6,6 +6,7 @@ import Plane from "../Shapes/Plane";
 import BoundingBox from "../Utility/BoundingBox";
 import SpaceCar from "../Scenery/SpaceCar";
 import ClassicCar from "../Scenery/ClassicCar";
+import Trophy from "../Scenery/Trophy";
 const Model = lazy( () => import('../Utility/Model'));
 
 const CarStop = (props) => {
@@ -49,6 +50,23 @@ const CarStop = (props) => {
           scale = {new Array(3).fill(7)}
           position ={[0,-0.2,0]}
         />
+      </group>
+
+      <group>
+        <Text
+              position={[0.8 ,1, 0]}
+              rotation={[0,3.23,0]}
+              scale={new Array(3).fill(0.6)}
+              path={font}
+              color={'#00a2ff'}
+              emissiveColor={'#ffc800'}
+              text = {"Car Shop!"}
+              curveSegments={12}
+              />
+        <Trophy
+            scale = {new Array(3).fill(2)}
+            position = {[0,7,3]}
+            />
       </group>
 
     </group>

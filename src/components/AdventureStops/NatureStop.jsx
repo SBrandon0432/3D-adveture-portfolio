@@ -7,7 +7,6 @@ import font from 'three/examples/fonts/gentilis_regular.typeface.json'
 import NatureStopLights from '../Lights/SceneryLights/NatureStopLights'
 import BoundingBox from "../Utility/BoundingBox";
 import PurpleSun from '../Scenery/PurpleSun';
-
 const Model = lazy(()=> import('../Utility/Model'));
 
 
@@ -63,6 +62,7 @@ const NatureStop = (props) => {
           position={[6,15,9]}
           rotation = {[-1,0,0]}
         />
+
       <Suspense>
         <Model
           path={'/Models/small_house_diorama/scene.gltf'}
