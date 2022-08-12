@@ -7,6 +7,7 @@ import BoundingBox from "../Utility/BoundingBox";
 import SpaceCar from "../Scenery/SpaceCar";
 import ClassicCar from "../Scenery/ClassicCar";
 import Trophy from "../Scenery/Trophy";
+import CarStopLights from "../Lights/SceneryLights/CarStopLights";
 const Model = lazy( () => import('../Utility/Model'));
 
 const CarStop = (props) => {
@@ -38,8 +39,6 @@ const CarStop = (props) => {
           rotation = {[-0.1,-0.008, 0.09]}
         />
       </group>
-
-
 
       <group
         ref={classicCarRef}
@@ -77,6 +76,7 @@ const CarStop = (props) => {
             />
       </group>
 
+      <CarStopLights/>
     </group>
   )
 }
