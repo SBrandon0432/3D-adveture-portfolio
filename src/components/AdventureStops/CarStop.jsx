@@ -62,12 +62,11 @@ const CarStop = (props) => {
 
       <group
         ref={spaceShipRef}
-        position = {[20,8,15]}
+        position = {[40,20,65]}
         rotation = {[0,0,0.7]}
         castShadow
         receiveShadow
       >
-        <Plane/>
         <SpaceShip
           scale = {new Array(3).fill(0.2)}
           position ={[0,-0.2,0]}
