@@ -19,7 +19,7 @@ const CarStop = (props) => {
   useFrame(()=> {
     mainCarGroupRef.current.rotation.y += 0.004
     classicCarRef.current.rotation.y -= 0.003
-    trophyRef.current.rotation.y -= 0.001
+    trophyRef.current.rotation.y -= 0.003
   })
 
   return (
@@ -28,9 +28,13 @@ const CarStop = (props) => {
       rotation={props?.rotation}
       {...props}
       ref={ref}
+      castShadow
+      receiveShadow
     >
       <group
         ref={mainCarGroupRef}
+        castShadow
+        receiveShadow
       >
         <Plane/>
         <SpaceCar
@@ -44,6 +48,8 @@ const CarStop = (props) => {
         ref={classicCarRef}
         position = {[20,10,-13]}
         rotation = {[0,0,0.7]}
+        castShadow
+        receiveShadow
       >
         <axesHelper args={[10,10,10]}/>
         <Plane/>
@@ -58,9 +64,12 @@ const CarStop = (props) => {
         onClick = {()=> {
           window.location = 'https://master.d258lkzp17ij6b.amplifyapp.com/';
         }}
+        castShadow
+        receiveShadow
         >
+          <axesHelper args={[10,10,10]}/>
         <Text
-              position={[1 ,7.9, 0.7]}
+              position={[0.9 ,7.9, -1]}
               rotation={[0,3.84,0]}
               scale={new Array(3).fill(1)}
               path={font}
@@ -71,7 +80,7 @@ const CarStop = (props) => {
               />
         <Trophy
             scale = {new Array(3).fill(2)}
-            position = {[0,7,3]}
+            position = {[0,7,0]}
             rotation = {[0,3.84,0]}
             />
       </group>
