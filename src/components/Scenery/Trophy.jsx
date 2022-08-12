@@ -7,9 +7,6 @@ const Trophy = (props) => {
 
   const ref = useRef();
 
-  useFrame(()=> {
-    ref.current.rotation.y += 0.001
-  })
   return (
     <group
       className = 'Trophy'

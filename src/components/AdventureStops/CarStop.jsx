@@ -13,10 +13,12 @@ const CarStop = (props) => {
   const ref = useRef();
   const mainCarGroupRef = useRef();
   const classicCarRef = useRef();
+  const trophyRef = useRef();
 
   useFrame(()=> {
     mainCarGroupRef.current.rotation.y += 0.004
     classicCarRef.current.rotation.y -= 0.003
+    trophyRef.current.rotation.y -= 0.001
   })
 
   return (
@@ -52,11 +54,16 @@ const CarStop = (props) => {
         />
       </group>
 
-      <group>
+      <group
+        ref={trophyRef}
+        onClick = {()=> {
+          window.location = 'https://master.d258lkzp17ij6b.amplifyapp.com/';
+        }}
+        >
         <Text
-              position={[0.8 ,1, 0]}
-              rotation={[0,3.23,0]}
-              scale={new Array(3).fill(0.6)}
+              position={[1 ,7.9, 0.7]}
+              rotation={[0,3.84,0]}
+              scale={new Array(3).fill(1)}
               path={font}
               color={'#00a2ff'}
               emissiveColor={'#ffc800'}
@@ -66,6 +73,7 @@ const CarStop = (props) => {
         <Trophy
             scale = {new Array(3).fill(2)}
             position = {[0,7,3]}
+            rotation = {[0,3.84,0]}
             />
       </group>
 
