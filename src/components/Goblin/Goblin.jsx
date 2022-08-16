@@ -20,7 +20,6 @@ const Goblin = (props) => {
     }
   })
 
-
   return (
     <group
       {...props}
